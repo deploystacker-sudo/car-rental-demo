@@ -25,7 +25,6 @@
             --charcoal: #262626;
             --matte-black: #171717;
             --black: #0a0a0a;
-            --gold: #c9a96e;
             --success: #16a34a;
             --error: #dc2626;
             --warning: #f59e0b;
@@ -33,7 +32,6 @@
             --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
             --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.05);
             --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.04);
-            --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.15);
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 16px;
@@ -44,173 +42,45 @@
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        body {
-            font-family: var(--font-sans);
-            color: var(--charcoal);
-            background: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        body { font-family: var(--font-sans); color: var(--charcoal); background: var(--white); line-height: 1.6; overflow-x: hidden; }
 
         /* ===== NAVIGATION ===== */
         .bk-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             padding: 1rem 2rem;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .bk-nav-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .bk-nav-logo {
-            font-family: var(--font-display);
-            font-size: 1.375rem;
-            font-weight: 600;
-            color: var(--matte-black);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-            cursor: pointer;
-        }
-        .bk-nav-back {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--dark-gray);
-            text-decoration: none;
-            transition: color 0.3s;
-            cursor: pointer;
-            background: none;
-            border: none;
-            font-family: var(--font-sans);
-        }
+        .bk-nav-inner { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .bk-nav-logo { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; color: var(--matte-black); text-decoration: none; letter-spacing: -0.02em; }
+        .bk-nav-back { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 500; color: var(--dark-gray); text-decoration: none; cursor: pointer; background: none; border: none; font-family: var(--font-sans); transition: color 0.3s; }
         .bk-nav-back:hover { color: var(--matte-black); }
-        .bk-nav-phone {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--dark-gray);
-            text-decoration: none;
-        }
+        .bk-nav-phone { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 500; color: var(--dark-gray); text-decoration: none; transition: color 0.3s; }
         .bk-nav-phone:hover { color: var(--matte-black); }
 
         /* ===== HERO ===== */
-        .bk-hero {
-            padding: 7rem 2rem 2.5rem;
-            background: var(--off-white);
-            text-align: center;
-        }
-        .bk-hero-tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--gray);
-            margin-bottom: 0.75rem;
-        }
-        .bk-hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(1.75rem, 4vw, 2.75rem);
-            font-weight: 600;
-            color: var(--matte-black);
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            margin-bottom: 0.5rem;
-        }
-        .bk-hero-desc {
-            font-size: 1rem;
-            color: var(--dark-gray);
-            max-width: 500px;
-            margin: 0 auto;
-        }
+        .bk-hero { padding: 7rem 2rem 2.5rem; background: var(--off-white); text-align: center; }
+        .bk-hero-tag { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray); margin-bottom: 0.75rem; }
+        .bk-hero-title { font-family: var(--font-display); font-size: clamp(1.75rem,4vw,2.75rem); font-weight: 600; color: var(--matte-black); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+        .bk-hero-desc { font-size: 1rem; color: var(--dark-gray); max-width: 500px; margin: 0 auto; }
 
-        /* ===== PROGRESS STEPS ===== */
+        /* ===== PROGRESS ===== */
         .bk-progress { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
-        .bk-steps {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-        }
-        .bk-step-ind {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            flex: 1;
-            position: relative;
-        }
-        .bk-step-ind:not(:last-child)::after {
-            content: '';
-            flex: 1;
-            height: 2px;
-            background: var(--medium-gray);
-            margin: 0 0.75rem;
-            transition: background 0.4s;
-        }
+        .bk-steps { display: flex; align-items: center; margin-bottom: 3rem; padding: 2rem 0; }
+        .bk-step-ind { display: flex; align-items: center; gap: 0.5rem; flex: 1; position: relative; }
+        .bk-step-ind:not(:last-child)::after { content: ''; flex: 1; height: 2px; background: var(--medium-gray); margin: 0 0.75rem; transition: background 0.4s; }
         .bk-step-ind.completed:not(:last-child)::after { background: var(--success); }
-        .bk-step-ind.active:not(:last-child)::after {
-            background: linear-gradient(to right, var(--matte-black), var(--medium-gray));
-        }
-        .bk-step-num {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8125rem;
-            font-weight: 600;
-            border: 2px solid var(--medium-gray);
-            color: var(--gray);
-            background: var(--white);
-            transition: all 0.4s;
-            flex-shrink: 0;
-        }
-        .bk-step-ind.active .bk-step-num {
-            border-color: var(--matte-black);
-            color: var(--white);
-            background: var(--matte-black);
-        }
-        .bk-step-ind.completed .bk-step-num {
-            border-color: var(--success);
-            color: var(--white);
-            background: var(--success);
-        }
-        .bk-step-label {
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--gray);
-            white-space: nowrap;
-            transition: color 0.3s;
-        }
+        .bk-step-ind.active:not(:last-child)::after { background: linear-gradient(to right, var(--matte-black), var(--medium-gray)); }
+        .bk-step-num { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8125rem; font-weight: 600; border: 2px solid var(--medium-gray); color: var(--gray); background: var(--white); transition: all 0.4s; flex-shrink: 0; }
+        .bk-step-ind.active .bk-step-num { border-color: var(--matte-black); color: var(--white); background: var(--matte-black); }
+        .bk-step-ind.completed .bk-step-num { border-color: var(--success); color: var(--white); background: var(--success); }
+        .bk-step-label { font-size: 0.75rem; font-weight: 500; color: var(--gray); white-space: nowrap; transition: color 0.3s; }
         .bk-step-ind.active .bk-step-label { color: var(--matte-black); font-weight: 600; }
         .bk-step-ind.completed .bk-step-label { color: var(--success); }
 
-        /* ===== MAIN LAYOUT ===== */
-        .bk-layout {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem 6rem;
-            display: grid;
-            grid-template-columns: 1fr 380px;
-            gap: 3rem;
-            align-items: start;
-        }
+        /* ===== LAYOUT ===== */
+        .bk-layout { max-width: 1200px; margin: 0 auto; padding: 0 2rem 6rem; display: grid; grid-template-columns: 1fr 380px; gap: 3rem; align-items: start; }
         .bk-main { min-width: 0; }
         .bk-sidebar { position: sticky; top: 5.5rem; }
 
@@ -218,124 +88,34 @@
         .bk-step { display: none; }
         .bk-step.active { display: block; }
         .bk-step-head { margin-bottom: 2rem; }
-        .bk-step-head h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--matte-black);
-            margin-bottom: 0.375rem;
-        }
+        .bk-step-head h3 { font-size: 1.25rem; font-weight: 600; color: var(--matte-black); margin-bottom: 0.375rem; }
         .bk-step-head p { font-size: 0.9375rem; color: var(--dark-gray); }
 
         /* ===== VEHICLE GRID ===== */
         .bk-vehicle-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-        .bk-vehicle-card {
-            display: flex;
-            gap: 1rem;
-            padding: 1.25rem;
-            border: 2px solid rgba(0, 0, 0, 0.06);
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            transition: all 0.3s;
-            background: var(--white);
-        }
-        .bk-vehicle-card:hover {
-            border-color: rgba(0, 0, 0, 0.15);
-            box-shadow: var(--shadow-md);
-        }
-        .bk-vehicle-card.selected {
-            border-color: var(--matte-black);
-            background: rgba(26, 26, 26, 0.02);
-        }
-        .bk-vehicle-card-img {
-            width: 160px;
-            height: 100px;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            flex-shrink: 0;
-            background: var(--light-gray);
-        }
+        .bk-vehicle-card { display: flex; gap: 1rem; padding: 1.25rem; border: 2px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); cursor: pointer; transition: all 0.3s; background: var(--white); }
+        .bk-vehicle-card:hover { border-color: rgba(0,0,0,0.15); box-shadow: var(--shadow-md); }
+        .bk-vehicle-card.selected { border-color: var(--matte-black); background: rgba(26,26,26,0.02); }
+        .bk-vehicle-card-img { width: 160px; height: 100px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; background: var(--light-gray); }
         .bk-vehicle-card-img img { width: 100%; height: 100%; object-fit: cover; }
-        .bk-vehicle-card-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-width: 0;
-            flex: 1;
-        }
-        .bk-vehicle-card-name {
-            font-size: 1.0625rem;
-            font-weight: 600;
-            color: var(--matte-black);
-        }
+        .bk-vehicle-card-info { display: flex; flex-direction: column; justify-content: center; min-width: 0; flex: 1; }
+        .bk-vehicle-card-name { font-size: 1.0625rem; font-weight: 600; color: var(--matte-black); }
         .bk-vehicle-card-cat { font-size: 0.8125rem; color: var(--gray); margin-top: 0.125rem; }
         .bk-vehicle-card-specs { display: flex; gap: 1rem; margin-top: 0.5rem; }
-        .bk-vehicle-card-spec {
-            display: flex;
-            align-items: center;
-            gap: 0.375rem;
-            font-size: 0.75rem;
-            color: var(--dark-gray);
-        }
+        .bk-vehicle-card-spec { display: flex; align-items: center; gap: 0.375rem; font-size: 0.75rem; color: var(--dark-gray); }
         .bk-vehicle-card-spec i { color: var(--gray); font-size: 0.6875rem; }
-        .bk-vehicle-card-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
-            flex-shrink: 0;
-            gap: 0.375rem;
-        }
-        .bk-vehicle-card-price {
-            font-size: 1.125rem;
-            font-weight: 700;
-            color: var(--matte-black);
-        }
+        .bk-vehicle-card-right { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; flex-shrink: 0; gap: 0.375rem; }
+        .bk-vehicle-card-price { font-size: 1.125rem; font-weight: 700; color: var(--matte-black); }
         .bk-vehicle-card-period { font-size: 0.6875rem; color: var(--gray); }
-        .bk-vehicle-card-check {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            border: 2px solid var(--medium-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            font-size: 0.6875rem;
-            color: transparent;
-        }
-        .bk-vehicle-card.selected .bk-vehicle-card-check {
-            border-color: var(--matte-black);
-            background: var(--matte-black);
-            color: var(--white);
-        }
+        .bk-vehicle-card-check { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--medium-gray); display: flex; align-items: center; justify-content: center; transition: all 0.3s; font-size: 0.6875rem; color: transparent; }
+        .bk-vehicle-card.selected .bk-vehicle-card-check { border-color: var(--matte-black); background: var(--matte-black); color: var(--white); }
 
         /* ===== SERVICE TYPE ===== */
-        .service-type-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .service-type-card {
-            padding: 1.25rem;
-            border: 2px solid rgba(0, 0, 0, 0.06);
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            transition: all 0.3s;
-            text-align: center;
-        }
-        .service-type-card:hover { border-color: rgba(0, 0, 0, 0.15); }
-        .service-type-card.selected {
-            border-color: var(--matte-black);
-            background: rgba(26, 26, 26, 0.02);
-        }
-        .service-type-card i {
-            font-size: 1.5rem;
-            color: var(--dark-gray);
-            margin-bottom: 0.625rem;
-            display: block;
-            transition: color 0.3s;
-        }
+        .service-type-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 2rem; }
+        .service-type-card { padding: 1.25rem; border: 2px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); cursor: pointer; transition: all 0.3s; text-align: center; }
+        .service-type-card:hover { border-color: rgba(0,0,0,0.15); }
+        .service-type-card.selected { border-color: var(--matte-black); background: rgba(26,26,26,0.02); }
+        .service-type-card i { font-size: 1.5rem; color: var(--dark-gray); margin-bottom: 0.625rem; display: block; transition: color 0.3s; }
         .service-type-card.selected i { color: var(--matte-black); }
         .service-type-card-title { font-size: 0.9375rem; font-weight: 600; color: var(--matte-black); }
         .service-type-card-desc { font-size: 0.75rem; color: var(--gray); margin-top: 0.25rem; }
@@ -345,70 +125,22 @@
         .bk-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         .bk-label { font-size: 0.8125rem; font-weight: 500; color: var(--charcoal); }
         .bk-label .req { color: var(--error); margin-left: 2px; }
-        .bk-input {
-            padding: 0.875rem 1rem;
-            border: 1.5px solid var(--medium-gray);
-            border-radius: var(--radius-sm);
-            font-size: 0.9375rem;
-            font-family: var(--font-sans);
-            color: var(--charcoal);
-            background: var(--white);
-            transition: all 0.3s;
-            outline: none;
-            width: 100%;
-        }
-        .bk-input:focus {
-            border-color: var(--charcoal);
-            box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.08);
-        }
-        .bk-input.error {
-            border-color: var(--error);
-            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.08);
-        }
+        .bk-input { padding: 0.875rem 1rem; border: 1.5px solid var(--medium-gray); border-radius: var(--radius-sm); font-size: 0.9375rem; font-family: var(--font-sans); color: var(--charcoal); background: var(--white); transition: all 0.3s; outline: none; width: 100%; }
+        .bk-input:focus { border-color: var(--charcoal); box-shadow: 0 0 0 3px rgba(26,26,26,0.08); }
+        .bk-input.error { border-color: var(--error); box-shadow: 0 0 0 3px rgba(220,38,38,0.08); }
         .bk-input::placeholder { color: var(--gray); }
-        select.bk-input {
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a3a3a3' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 1rem center;
-        }
+        select.bk-input { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a3a3a3' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; }
         textarea.bk-input { resize: vertical; min-height: 80px; }
         .bk-err { font-size: 0.75rem; color: var(--error); display: none; margin-top: 0.125rem; }
         .bk-err.show { display: block; }
 
         /* ===== ADD-ONS ===== */
         .addon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; margin-bottom: 2rem; }
-        .addon-card {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem;
-            border: 2px solid rgba(0, 0, 0, 0.06);
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .addon-card:hover { border-color: rgba(0, 0, 0, 0.15); }
-        .addon-card.selected { border-color: var(--matte-black); background: rgba(26, 26, 26, 0.02); }
-        .addon-toggle {
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--medium-gray);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: all 0.3s;
-            font-size: 0.625rem;
-            color: transparent;
-        }
-        .addon-card.selected .addon-toggle {
-            border-color: var(--matte-black);
-            background: var(--matte-black);
-            color: var(--white);
-        }
+        .addon-card { display: flex; align-items: center; gap: 0.75rem; padding: 1rem; border: 2px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); cursor: pointer; transition: all 0.3s; }
+        .addon-card:hover { border-color: rgba(0,0,0,0.15); }
+        .addon-card.selected { border-color: var(--matte-black); background: rgba(26,26,26,0.02); }
+        .addon-toggle { width: 20px; height: 20px; border: 2px solid var(--medium-gray); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s; font-size: 0.625rem; color: transparent; }
+        .addon-card.selected .addon-toggle { border-color: var(--matte-black); background: var(--matte-black); color: var(--white); }
         .addon-info { flex: 1; min-width: 0; }
         .addon-name { font-size: 0.875rem; font-weight: 500; color: var(--charcoal); }
         .addon-price { font-size: 0.6875rem; color: var(--gray); }
@@ -417,341 +149,93 @@
         /* ===== COUPON ===== */
         .coupon-row { display: flex; gap: 0.75rem; margin-bottom: 1rem; }
         .coupon-row .bk-input { flex: 1; }
-        .coupon-btn {
-            padding: 0.875rem 1.5rem;
-            background: var(--light-gray);
-            color: var(--matte-black);
-            border: 1.5px solid var(--medium-gray);
-            border-radius: var(--radius-sm);
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: var(--font-sans);
-            white-space: nowrap;
-        }
+        .coupon-btn { padding: 0.875rem 1.5rem; background: var(--light-gray); color: var(--matte-black); border: 1.5px solid var(--medium-gray); border-radius: var(--radius-sm); font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.3s; font-family: var(--font-sans); white-space: nowrap; }
         .coupon-btn:hover { background: var(--medium-gray); }
-        .coupon-applied {
-            display: none;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.625rem 1rem;
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            border-radius: var(--radius-sm);
-            font-size: 0.8125rem;
-            color: var(--success);
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-        }
+        .coupon-applied { display: none; align-items: center; gap: 0.5rem; padding: 0.625rem 1rem; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--success); font-weight: 500; margin-bottom: 1.5rem; }
         .coupon-applied.show { display: flex; }
 
         /* ===== DEPOSIT NOTICE ===== */
-        .deposit-notice {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            padding: 1rem;
-            background: #fffbeb;
-            border: 1px solid #fde68a;
-            border-radius: var(--radius-sm);
-            margin-bottom: 1.5rem;
-            font-size: 0.8125rem;
-            color: #92400e;
-            line-height: 1.5;
-        }
+        .deposit-notice { display: flex; align-items: flex-start; gap: 0.75rem; padding: 1rem; background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-size: 0.8125rem; color: #92400e; line-height: 1.5; }
         .deposit-notice i { flex-shrink: 0; margin-top: 2px; color: var(--warning); }
 
-        /* ===== PAYMENT METHODS ===== */
+        /* ===== PAYMENT ===== */
         .payment-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
-        .pay-card {
-            padding: 1.25rem;
-            border: 2px solid rgba(0, 0, 0, 0.06);
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            transition: all 0.3s;
-            text-align: center;
-        }
-        .pay-card:hover { border-color: rgba(0, 0, 0, 0.15); }
-        .pay-card.selected { border-color: var(--matte-black); background: rgba(26, 26, 26, 0.02); }
-        .pay-card i {
-            font-size: 1.5rem;
-            color: var(--dark-gray);
-            margin-bottom: 0.5rem;
-            display: block;
-            transition: color 0.3s;
-        }
+        .pay-card { padding: 1.25rem; border: 2px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); cursor: pointer; transition: all 0.3s; text-align: center; }
+        .pay-card:hover { border-color: rgba(0,0,0,0.15); }
+        .pay-card.selected { border-color: var(--matte-black); background: rgba(26,26,26,0.02); }
+        .pay-card i { font-size: 1.5rem; color: var(--dark-gray); margin-bottom: 0.5rem; display: block; transition: color 0.3s; }
         .pay-card.selected i { color: var(--matte-black); }
         .pay-card-label { font-size: 0.875rem; font-weight: 500; color: var(--matte-black); }
 
         /* ===== TERMS ===== */
-        .terms-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.625rem;
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: var(--light-gray);
-            border-radius: var(--radius-sm);
-        }
+        .terms-row { display: flex; align-items: flex-start; gap: 0.625rem; margin-top: 1.5rem; padding: 1rem; background: var(--light-gray); border-radius: var(--radius-sm); }
         .terms-row input { margin-top: 3px; accent-color: var(--matte-black); }
         .terms-row label { font-size: 0.8125rem; color: var(--dark-gray); line-height: 1.5; }
         .terms-row a { color: var(--matte-black); text-decoration: underline; }
 
         /* ===== SIDEBAR ===== */
-        .sidebar-card {
-            background: var(--white);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-        .sidebar-vehicle {
-            padding: 1.25rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-        .sidebar-vehicle-img {
-            width: 64px;
-            height: 48px;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            background: var(--light-gray);
-            flex-shrink: 0;
-        }
+        .sidebar-card { background: var(--white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+        .sidebar-vehicle { padding: 1.25rem; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; gap: 1rem; align-items: center; }
+        .sidebar-vehicle-img { width: 64px; height: 48px; border-radius: var(--radius-sm); overflow: hidden; background: var(--light-gray); flex-shrink: 0; }
         .sidebar-vehicle-img img { width: 100%; height: 100%; object-fit: cover; }
         .sidebar-vehicle-name { font-size: 0.9375rem; font-weight: 600; color: var(--matte-black); }
         .sidebar-vehicle-cat { font-size: 0.75rem; color: var(--gray); }
-        .sidebar-placeholder {
-            padding: 2.5rem 1.5rem;
-            text-align: center;
-            color: var(--gray);
-            font-size: 0.875rem;
-        }
+        .sidebar-placeholder { padding: 2.5rem 1.5rem; text-align: center; color: var(--gray); font-size: 0.875rem; }
         .sidebar-body { padding: 1.5rem; }
-        .sidebar-title {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--gray);
-            margin-bottom: 1rem;
-        }
-        .sidebar-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 0;
-            font-size: 0.875rem;
-        }
+        .sidebar-title { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray); margin-bottom: 1rem; }
+        .sidebar-row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; font-size: 0.875rem; }
         .sidebar-row-label { color: var(--dark-gray); }
         .sidebar-row-value { font-weight: 500; color: var(--charcoal); }
         .sidebar-row.discount .sidebar-row-label { color: var(--success); }
         .sidebar-row.discount .sidebar-row-value { color: var(--success); }
         .sidebar-divider { border: none; border-top: 1px dashed var(--medium-gray); margin: 0.5rem 0; }
-        .sidebar-total {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 0.75rem;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--matte-black);
-        }
+        .sidebar-total { display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; font-size: 1.25rem; font-weight: 700; color: var(--matte-black); }
         .sidebar-total-value { font-family: var(--font-display); letter-spacing: -0.02em; }
-        .sidebar-deposit {
-            margin-top: 0.75rem;
-            font-size: 0.75rem;
-            color: var(--warning);
-            display: flex;
-            align-items: center;
-            gap: 0.375rem;
-        }
-        .sidebar-deposit i { font-size: 0.6875rem; }
-        .sidebar-footer {
-            padding: 1.25rem 1.5rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.06);
-            background: var(--white);
-        }
-        .sidebar-btn {
-            width: 100%;
-            padding: 1rem;
-            background: var(--matte-black);
-            color: var(--white);
-            border: none;
-            border-radius: var(--radius-sm);
-            font-size: 0.9375rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: var(--font-sans);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
+        .sidebar-deposit { margin-top: 0.75rem; padding: 0.5rem 0.75rem; font-size: 0.75rem; color: var(--warning); display: flex; align-items: center; gap: 0.375rem; background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius-sm); }
+        .sidebar-deposit i { font-size: 0.6875rem; flex-shrink: 0; }
+        .sidebar-footer { padding: 1.25rem 1.5rem; border-top: 1px solid rgba(0,0,0,0.06); background: var(--white); }
+        .sidebar-btn { width: 100%; padding: 1rem; background: var(--matte-black); color: var(--white); border: none; border-radius: var(--radius-sm); font-size: 0.9375rem; font-weight: 500; cursor: pointer; transition: all 0.3s; font-family: var(--font-sans); display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
         .sidebar-btn:hover { background: var(--black); box-shadow: var(--shadow-lg); }
         .sidebar-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
-        .sidebar-back {
-            width: 100%;
-            padding: 0.75rem;
-            background: transparent;
-            color: var(--dark-gray);
-            border: 1.5px solid var(--medium-gray);
-            border-radius: var(--radius-sm);
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: var(--font-sans);
-            margin-top: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
+        .sidebar-back { width: 100%; padding: 0.75rem; background: transparent; color: var(--dark-gray); border: 1.5px solid var(--medium-gray); border-radius: var(--radius-sm); font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.3s; font-family: var(--font-sans); margin-top: 0.75rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
         .sidebar-back:hover { border-color: var(--charcoal); color: var(--matte-black); }
-        .sidebar-trust {
-            padding: 1rem 1.5rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.06);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.75rem;
-            color: var(--gray);
-        }
+        .sidebar-trust { padding: 1rem 1.5rem; border-top: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; color: var(--gray); }
         .sidebar-trust i { color: var(--success); }
-        .sidebar-toggle-bar {
-            display: none;
-            padding: 0.75rem 1.25rem;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            cursor: pointer;
-            font-size: 0.8125rem;
-            font-weight: 500;
-            color: var(--dark-gray);
-        }
-        .sidebar-toggle-bar i { transition: transform 0.3s; }
+
+        /* Mobile sidebar toggle bar - hidden on desktop */
+        .sidebar-toggle-bar { display: none; padding: 0.875rem 1.25rem; cursor: pointer; align-items: center; justify-content: space-between; }
+        .sidebar-toggle-bar i { transition: transform 0.3s; color: var(--medium-gray); }
 
         /* ===== CONFIRMATION ===== */
-        .bk-confirm {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 3rem 2rem 6rem;
-            text-align: center;
-            display: none;
-        }
+        .bk-confirm { max-width: 700px; margin: 0 auto; padding: 3rem 2rem 6rem; text-align: center; display: none; }
         .bk-confirm.active { display: block; }
-        .confirm-icon {
-            width: 96px;
-            height: 96px;
-            background: #f0fdf4;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            font-size: 2.5rem;
-            color: var(--success);
-        }
-        .confirm-title {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--matte-black);
-            margin-bottom: 0.5rem;
-        }
+        .confirm-icon { width: 96px; height: 96px; background: #f0fdf4; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; font-size: 2.5rem; color: var(--success); }
+        .confirm-title { font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: var(--matte-black); margin-bottom: 0.5rem; }
         .confirm-subtitle { font-size: 1.0625rem; color: var(--dark-gray); margin-bottom: 2rem; }
-        .confirm-id {
-            display: inline-block;
-            background: var(--light-gray);
-            padding: 0.75rem 2rem;
-            border-radius: var(--radius-md);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--matte-black);
-            letter-spacing: 0.05em;
-            margin-bottom: 2.5rem;
-            font-family: monospace;
-        }
-        .confirm-card {
-            background: var(--white);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            text-align: left;
-            margin-bottom: 2rem;
-        }
-        .confirm-card-header {
-            padding: 1.25rem 1.5rem;
-            background: var(--light-gray);
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--matte-black);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+        .confirm-id { display: inline-block; background: var(--light-gray); padding: 0.75rem 2rem; border-radius: var(--radius-md); font-size: 1.5rem; font-weight: 700; color: var(--matte-black); letter-spacing: 0.05em; margin-bottom: 2.5rem; font-family: monospace; }
+        .confirm-card { background: var(--white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); text-align: left; margin-bottom: 2rem; }
+        .confirm-card-header { padding: 1.25rem 1.5rem; background: var(--light-gray); font-size: 0.875rem; font-weight: 600; color: var(--matte-black); text-transform: uppercase; letter-spacing: 0.05em; }
         .confirm-card-body { padding: 0 1.5rem 1.5rem; }
-        .confirm-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-            font-size: 0.875rem;
-        }
+        .confirm-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 0.75rem 0; border-bottom: 1px solid rgba(0,0,0,0.04); font-size: 0.875rem; }
         .confirm-row:last-child { border-bottom: none; }
         .confirm-row-label { color: var(--gray); flex-shrink: 0; }
         .confirm-row-value { font-weight: 500; color: var(--charcoal); text-align: right; margin-left: 1rem; }
         .confirm-row.highlight .confirm-row-label { color: var(--matte-black); font-weight: 600; }
         .confirm-row.highlight .confirm-row-value { color: var(--matte-black); font-weight: 700; font-size: 1.0625rem; }
-        .confirm-row.warn .confirm-row-label { color: var(--warning); }
+        .confirm-row.warn .confirm-row-label,
         .confirm-row.warn .confirm-row-value { color: var(--warning); }
-        .confirm-row.green .confirm-row-label { color: var(--success); }
+        .confirm-row.green .confirm-row-label,
         .confirm-row.green .confirm-row-value { color: var(--success); }
         .confirm-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-home { padding: 1rem 2.5rem; background: var(--matte-black); color: var(--white); border: none; border-radius: 100px; font-size: 1rem; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-sans); transition: all 0.3s; }
+        .btn-home:hover { background: var(--black); transform: translateY(-2px); box-shadow: var(--shadow-xl); }
+        .btn-wa { padding: 1rem 2.5rem; background: transparent; color: var(--matte-black); border: 1.5px solid var(--medium-gray); border-radius: 100px; font-size: 1rem; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-sans); transition: all 0.3s; }
+        .btn-wa:hover { border-color: var(--charcoal); background: var(--light-gray); }
 
-        /* ===== WHATSAPP ===== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 60px;
-            height: 60px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            z-index: 100;
-            transition: all 0.3s;
-        }
-        .whatsapp-float:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5); }
-
-        /* ===== TOAST ===== */
-        .toast {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: var(--matte-black);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: var(--radius-md);
-            font-size: 0.9375rem;
-            z-index: 10001;
-            opacity: 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            white-space: nowrap;
-        }
+        /* ===== FLOATING ELEMENTS ===== */
+        .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; text-decoration: none; box-shadow: 0 4px 12px rgba(37,211,102,0.4); z-index: 100; transition: all 0.3s; }
+        .whatsapp-float:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(37,211,102,0.5); }
+        .toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--matte-black); color: var(--white); padding: 1rem 2rem; border-radius: var(--radius-md); font-size: 0.9375rem; z-index: 10001; opacity: 0; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); white-space: nowrap; }
         .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
         /* ===== FOOTER ===== */
@@ -759,42 +243,94 @@
         .bk-footer p { font-size: 0.8125rem; color: var(--gray); }
         .bk-footer a { color: var(--dark-gray); text-decoration: none; }
 
-        /* ===== RESPONSIVE ===== */
+        /* ========================================
+           MOBILE RESPONSIVE
+           ======================================== */
         @media (max-width: 900px) {
             .bk-layout { grid-template-columns: 1fr; }
+
+            /* Bottom sheet sidebar */
             .bk-sidebar {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                top: auto;
-                z-index: 100;
+                position: fixed; bottom: 0; left: 0; right: 0; top: auto; z-index: 100;
                 border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-                max-width: 100%;
-                margin: 0;
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+                max-width: 100%; margin: 0;
                 transform: translateY(calc(100% - 76px));
-                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
             }
             .bk-sidebar.expanded { transform: translateY(0); }
-            .sidebar-toggle-bar { display: flex !important; }
+
+            /* Toggle bar */
+            .sidebar-toggle-bar {
+                display: flex !important;
+                font-size: 0.875rem; font-weight: 600; color: var(--matte-black);
+            }
             .bk-sidebar.expanded .sidebar-toggle-bar i { transform: rotate(180deg); }
-            .sidebar-vehicle, .sidebar-deposit, .sidebar-trust { display: none !important; }
-            .sidebar-footer { border-top: none; padding-top: 0; }
-            .sidebar-back { display: none !important; }
+
+            /* Vehicle info */
+            .sidebar-vehicle { display: flex !important; padding: 0.75rem 1.25rem; gap: 0.75rem; }
+            .sidebar-vehicle-img { width: 48px; height: 36px; }
+            .sidebar-vehicle-name { font-size: 0.875rem; }
+            .sidebar-vehicle-cat { font-size: 0.6875rem; }
+
+            /* Placeholder */
+            .sidebar-placeholder { display: none !important; }
+
+            /* Body */
+            .sidebar-body { padding: 1rem 1.25rem; }
+            .sidebar-title { font-size: 0.6875rem; margin-bottom: 0.625rem; }
+            .sidebar-row { font-size: 0.8125rem; padding: 0.375rem 0; }
+            .sidebar-total { font-size: 1.125rem; padding-top: 0.5rem; }
+
+            /* Deposit */
+            .sidebar-deposit { font-size: 0.6875rem; margin-top: 0.5rem; }
+
+            /* Footer */
+            .sidebar-footer { padding: 0.875rem 1.25rem; border-top: 1px solid rgba(0,0,0,0.04); }
+            .sidebar-btn { padding: 0.875rem; font-size: 0.9375rem; }
+
+            /* Back button */
+            .sidebar-back { display: flex !important; padding: 0.625rem !important; margin-top: 0.5rem !important; font-size: 0.875rem !important; }
+
+            /* Trust */
+            .sidebar-trust { display: flex !important; padding: 0.625rem 1.25rem; border-top: 1px solid rgba(0,0,0,0.04); font-size: 0.6875rem; }
+
+            /* Card overrides */
+            .sidebar-card { border-radius: var(--radius-xl) var(--radius-xl) 0 0; box-shadow: none; border: none; }
+
+            /* Step labels */
             .bk-steps { padding: 1rem 0; margin-bottom: 1.5rem; }
             .bk-step-label { display: none; }
+
+            /* Fields */
             .bk-field-row { grid-template-columns: 1fr; }
             .service-type-grid { grid-template-columns: 1fr; }
             .addon-grid { grid-template-columns: 1fr; }
             .bk-vehicle-card-img { width: 120px; height: 80px; }
+
+            /* Spacing */
             .bk-hero { padding: 6rem 1.5rem 2rem; }
             .bk-progress { padding: 0 1.5rem; }
             .bk-layout { padding: 0 1.5rem 8rem; }
+
+            /* Float */
             .whatsapp-float { bottom: 6rem; right: 1rem; width: 52px; height: 52px; font-size: 1.25rem; }
+
+            /* Confirm */
+            .bk-confirm { padding: 2rem 1.25rem 6rem; }
+            .confirm-icon { width: 72px; height: 72px; font-size: 2rem; }
+            .confirm-title { font-size: 1.5rem; }
+            .confirm-id { font-size: 1.125rem; padding: 0.625rem 1.5rem; }
+            .confirm-card-body { padding: 0 1rem 1rem; }
+            .confirm-row { font-size: 0.8125rem; padding: 0.625rem 0; }
+            .confirm-row.highlight .confirm-row-value { font-size: 0.9375rem; }
+            .confirm-actions { flex-direction: column; align-items: stretch; }
+            .btn-home, .btn-wa { justify-content: center; }
         }
+
         @media (max-width: 480px) {
             .payment-grid { grid-template-columns: 1fr 1fr; }
+            .bk-nav-phone { display: none; }
         }
     </style>
 </head>
@@ -804,12 +340,8 @@
     <nav class="bk-nav">
         <div class="bk-nav-inner">
             <a class="bk-nav-logo" href="index.html">Velora Drive</a>
-            <button class="bk-nav-back" onclick="window.location.href='index.html'">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </button>
-            <a class="bk-nav-phone" href="tel:+919876543210">
-                <i class="fas fa-phone"></i> +91 98765 43210
-            </a>
+            <button class="bk-nav-back" onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i> Back to Home</button>
+            <a class="bk-nav-phone" href="tel:+919876543210"><i class="fas fa-phone"></i> +91 98765 43210</a>
         </div>
     </nav>
 
@@ -823,22 +355,10 @@
     <!-- Progress -->
     <div class="bk-progress">
         <div class="bk-steps" id="bkSteps">
-            <div class="bk-step-ind active" data-step="1">
-                <div class="bk-step-num">1</div>
-                <div class="bk-step-label">Vehicle</div>
-            </div>
-            <div class="bk-step-ind" data-step="2">
-                <div class="bk-step-num">2</div>
-                <div class="bk-step-label">Trip Details</div>
-            </div>
-            <div class="bk-step-ind" data-step="3">
-                <div class="bk-step-num">3</div>
-                <div class="bk-step-label">Your Details</div>
-            </div>
-            <div class="bk-step-ind" data-step="4">
-                <div class="bk-step-num">4</div>
-                <div class="bk-step-label">Payment</div>
-            </div>
+            <div class="bk-step-ind active" data-step="1"><div class="bk-step-num">1</div><div class="bk-step-label">Vehicle</div></div>
+            <div class="bk-step-ind" data-step="2"><div class="bk-step-num">2</div><div class="bk-step-label">Trip Details</div></div>
+            <div class="bk-step-ind" data-step="3"><div class="bk-step-num">3</div><div class="bk-step-label">Your Details</div></div>
+            <div class="bk-step-ind" data-step="4"><div class="bk-step-num">4</div><div class="bk-step-label">Payment</div></div>
         </div>
     </div>
 
@@ -848,431 +368,156 @@
 
             <!-- STEP 1: Vehicle -->
             <div class="bk-step active" data-step="1">
-                <div class="bk-step-head">
-                    <h3>Select Your Vehicle</h3>
-                    <p>Choose the perfect vehicle for your journey.</p>
-                </div>
+                <div class="bk-step-head"><h3>Select Your Vehicle</h3><p>Choose the perfect vehicle for your journey.</p></div>
                 <div class="bk-vehicle-grid" id="bkVehicleGrid"></div>
             </div>
 
             <!-- STEP 2: Trip Details -->
             <div class="bk-step" data-step="2">
-                <div class="bk-step-head">
-                    <h3>Trip Details</h3>
-                    <p>Tell us about your trip.</p>
-                </div>
-                <label class="bk-label" style="margin-bottom: 0.75rem; display: block;">
-                    Service Type <span class="req">*</span>
-                </label>
+                <div class="bk-step-head"><h3>Trip Details</h3><p>Tell us about your trip.</p></div>
+                <label class="bk-label" style="margin-bottom:0.75rem;display:block">Service Type <span class="req">*</span></label>
                 <div class="service-type-grid">
-                    <div class="service-type-card selected" onclick="selectService(this,'self-drive')">
-                        <i class="fas fa-car"></i>
-                        <div class="service-type-card-title">Self-Drive</div>
-                        <div class="service-type-card-desc">Drive it yourself</div>
-                    </div>
-                    <div class="service-type-card" onclick="selectService(this,'chauffeur')">
-                        <i class="fas fa-user-tie"></i>
-                        <div class="service-type-card-title">Chauffeur</div>
-                        <div class="service-type-card-desc">+₹1,500/day</div>
-                    </div>
-                    <div class="service-type-card" onclick="selectService(this,'airport')">
-                        <i class="fas fa-plane-arrival"></i>
-                        <div class="service-type-card-title">Airport Pickup</div>
-                        <div class="service-type-card-desc">+₹800/day</div>
-                    </div>
+                    <div class="service-type-card selected" onclick="selectService(this,'self-drive')"><i class="fas fa-car"></i><div class="service-type-card-title">Self-Drive</div><div class="service-type-card-desc">Drive it yourself</div></div>
+                    <div class="service-type-card" onclick="selectService(this,'chauffeur')"><i class="fas fa-user-tie"></i><div class="service-type-card-title">Chauffeur</div><div class="service-type-card-desc">+₹1,500/day</div></div>
+                    <div class="service-type-card" onclick="selectService(this,'airport')"><i class="fas fa-plane-arrival"></i><div class="service-type-card-title">Airport Pickup</div><div class="service-type-card-desc">+₹800/day</div></div>
                 </div>
                 <div class="bk-field-row">
-                    <div class="bk-field">
-                        <label class="bk-label">Pickup Location <span class="req">*</span></label>
-                        <select class="bk-input" id="fPickupLoc">
-                            <option value="">Select city</option>
-                            <option value="delhi">Delhi</option>
-                            <option value="gurgaon">Gurgaon</option>
-                            <option value="noida">Noida</option>
-                            <option value="chandigarh">Chandigarh</option>
-                            <option value="jaipur">Jaipur</option>
-                        </select>
-                        <div class="bk-err" id="ePickupLoc">Please select a pickup location</div>
-                    </div>
-                    <div class="bk-field">
-                        <label class="bk-label">Drop Location</label>
-                        <select class="bk-input" id="fDropLoc">
-                            <option value="">Same as pickup</option>
-                            <option value="delhi">Delhi</option>
-                            <option value="gurgaon">Gurgaon</option>
-                            <option value="noida">Noida</option>
-                            <option value="chandigarh">Chandigarh</option>
-                            <option value="jaipur">Jaipur</option>
-                        </select>
-                    </div>
+                    <div class="bk-field"><label class="bk-label">Pickup Location <span class="req">*</span></label><select class="bk-input" id="fPickupLoc"><option value="">Select city</option><option value="delhi">Delhi</option><option value="gurgaon">Gurgaon</option><option value="noida">Noida</option><option value="chandigarh">Chandigarh</option><option value="jaipur">Jaipur</option></select><div class="bk-err" id="ePickupLoc">Please select a pickup location</div></div>
+                    <div class="bk-field"><label class="bk-label">Drop Location</label><select class="bk-input" id="fDropLoc"><option value="">Same as pickup</option><option value="delhi">Delhi</option><option value="gurgaon">Gurgaon</option><option value="noida">Noida</option><option value="chandigarh">Chandigarh</option><option value="jaipur">Jaipur</option></select></div>
                 </div>
                 <div class="bk-field-row">
-                    <div class="bk-field">
-                        <label class="bk-label">Pickup Date <span class="req">*</span></label>
-                        <input type="date" class="bk-input" id="fPickupDate" onchange="calcPrice()">
-                        <div class="bk-err" id="ePickupDate">Please select pickup date</div>
-                    </div>
-                    <div class="bk-field">
-                        <label class="bk-label">Return Date <span class="req">*</span></label>
-                        <input type="date" class="bk-input" id="fReturnDate" onchange="calcPrice()">
-                        <div class="bk-err" id="eReturnDate">Please select return date</div>
-                    </div>
+                    <div class="bk-field"><label class="bk-label">Pickup Date <span class="req">*</span></label><input type="date" class="bk-input" id="fPickupDate" onchange="calcPrice()"><div class="bk-err" id="ePickupDate">Please select pickup date</div></div>
+                    <div class="bk-field"><label class="bk-label">Return Date <span class="req">*</span></label><input type="date" class="bk-input" id="fReturnDate" onchange="calcPrice()"><div class="bk-err" id="eReturnDate">Please select return date</div></div>
                 </div>
                 <div class="bk-field-row">
-                    <div class="bk-field">
-                        <label class="bk-label">Pickup Time</label>
-                        <input type="time" class="bk-input" id="fPickupTime" value="10:00">
-                    </div>
+                    <div class="bk-field"><label class="bk-label">Pickup Time</label><input type="time" class="bk-input" id="fPickupTime" value="10:00"></div>
                     <div class="bk-field"></div>
                 </div>
-                <label class="bk-label" style="margin-bottom: 0.75rem; display: block;">Add-ons</label>
+                <label class="bk-label" style="margin-bottom:0.75rem;display:block">Add-ons</label>
                 <div class="addon-grid">
-                    <div class="addon-card" onclick="toggleAddon(this,'gps',299)">
-                        <div class="addon-toggle"><i class="fas fa-check"></i></div>
-                        <div class="addon-info">
-                            <div class="addon-name">GPS Navigation</div>
-                            <div class="addon-price">Turn-by-turn guidance</div>
-                        </div>
-                        <div class="addon-charge">₹299/day</div>
-                    </div>
-                    <div class="addon-card" onclick="toggleAddon(this,'child-seat',199)">
-                        <div class="addon-toggle"><i class="fas fa-check"></i></div>
-                        <div class="addon-info">
-                            <div class="addon-name">Child Seat</div>
-                            <div class="addon-price">ISOFIX compatible</div>
-                        </div>
-                        <div class="addon-charge">₹199/day</div>
-                    </div>
-                    <div class="addon-card" onclick="toggleAddon(this,'dashcam',149)">
-                        <div class="addon-toggle"><i class="fas fa-check"></i></div>
-                        <div class="addon-info">
-                            <div class="addon-name">Dash Camera</div>
-                            <div class="addon-price">Full HD recording</div>
-                        </div>
-                        <div class="addon-charge">₹149/day</div>
-                    </div>
-                    <div class="addon-card" onclick="toggleAddon(this,'wifi',249)">
-                        <div class="addon-toggle"><i class="fas fa-check"></i></div>
-                        <div class="addon-info">
-                            <div class="addon-name">Portable WiFi</div>
-                            <div class="addon-price">4G hotspot</div>
-                        </div>
-                        <div class="addon-charge">₹249/day</div>
-                    </div>
+                    <div class="addon-card" onclick="toggleAddon(this,'gps',299)"><div class="addon-toggle"><i class="fas fa-check"></i></div><div class="addon-info"><div class="addon-name">GPS Navigation</div><div class="addon-price">Turn-by-turn guidance</div></div><div class="addon-charge">₹299/day</div></div>
+                    <div class="addon-card" onclick="toggleAddon(this,'child-seat',199)"><div class="addon-toggle"><i class="fas fa-check"></i></div><div class="addon-info"><div class="addon-name">Child Seat</div><div class="addon-price">ISOFIX compatible</div></div><div class="addon-charge">₹199/day</div></div>
+                    <div class="addon-card" onclick="toggleAddon(this,'dashcam',149)"><div class="addon-toggle"><i class="fas fa-check"></i></div><div class="addon-info"><div class="addon-name">Dash Camera</div><div class="addon-price">Full HD recording</div></div><div class="addon-charge">₹149/day</div></div>
+                    <div class="addon-card" onclick="toggleAddon(this,'wifi',249)"><div class="addon-toggle"><i class="fas fa-check"></i></div><div class="addon-info"><div class="addon-name">Portable WiFi</div><div class="addon-price">4G hotspot</div></div><div class="addon-charge">₹249/day</div></div>
                 </div>
-                <div class="coupon-row">
-                    <input type="text" class="bk-input" id="couponInput" placeholder="Enter coupon code">
-                    <button class="coupon-btn" onclick="applyCoupon()">Apply</button>
-                </div>
-                <div class="coupon-applied" id="couponApplied">
-                    <i class="fas fa-tag"></i>
-                    <span id="couponText"></span>
-                    <span style="margin-left: auto; cursor: pointer;" onclick="removeCoupon()">
-                        <i class="fas fa-times"></i>
-                    </span>
-                </div>
-                <div class="deposit-notice" id="depositNotice" style="display: none;">
-                    <i class="fas fa-info-circle"></i>
-                    <span id="depositText"></span>
-                </div>
+                <div class="coupon-row"><input type="text" class="bk-input" id="couponInput" placeholder="Enter coupon code"><button class="coupon-btn" onclick="applyCoupon()">Apply</button></div>
+                <div class="coupon-applied" id="couponApplied"><i class="fas fa-tag"></i><span id="couponText"></span><span style="margin-left:auto;cursor:pointer" onclick="removeCoupon()"><i class="fas fa-times"></i></span></div>
+                <div class="deposit-notice" id="depositNotice" style="display:none"><i class="fas fa-info-circle"></i><span id="depositText"></span></div>
             </div>
 
             <!-- STEP 3: Personal Details -->
             <div class="bk-step" data-step="3">
-                <div class="bk-step-head">
-                    <h3>Your Details</h3>
-                    <p>We need this information to process your booking.</p>
+                <div class="bk-step-head"><h3>Your Details</h3><p>We need this information to process your booking.</p></div>
+                <div class="bk-field-row">
+                    <div class="bk-field"><label class="bk-label">Full Name <span class="req">*</span></label><input type="text" class="bk-input" id="fName" placeholder="As per ID proof"><div class="bk-err" id="eName">Please enter your full name</div></div>
+                    <div class="bk-field"><label class="bk-label">Mobile Number <span class="req">*</span></label><input type="tel" class="bk-input" id="fPhone" placeholder="+91 XXXXX XXXXX" maxlength="10"><div class="bk-err" id="ePhone">Enter a valid 10-digit number</div></div>
                 </div>
                 <div class="bk-field-row">
-                    <div class="bk-field">
-                        <label class="bk-label">Full Name <span class="req">*</span></label>
-                        <input type="text" class="bk-input" id="fName" placeholder="As per ID proof">
-                        <div class="bk-err" id="eName">Please enter your full name</div>
-                    </div>
-                    <div class="bk-field">
-                        <label class="bk-label">Mobile Number <span class="req">*</span></label>
-                        <input type="tel" class="bk-input" id="fPhone" placeholder="+91 XXXXX XXXXX" maxlength="10">
-                        <div class="bk-err" id="ePhone">Enter a valid 10-digit number</div>
-                    </div>
+                    <div class="bk-field"><label class="bk-label">Email Address <span class="req">*</span></label><input type="email" class="bk-input" id="fEmail" placeholder="your@email.com"><div class="bk-err" id="eEmail">Enter a valid email address</div></div>
+                    <div class="bk-field"><label class="bk-label">Date of Birth <span class="req">*</span></label><input type="date" class="bk-input" id="fDob"><div class="bk-err" id="eDob">You must be at least 21 years old</div></div>
                 </div>
+                <div class="bk-field"><label class="bk-label">Driving License Number <span class="req">*</span></label><input type="text" class="bk-input" id="fDL" placeholder="DL number"><div class="bk-err" id="eDL">Please enter your DL number</div></div>
                 <div class="bk-field-row">
-                    <div class="bk-field">
-                        <label class="bk-label">Email Address <span class="req">*</span></label>
-                        <input type="email" class="bk-input" id="fEmail" placeholder="your@email.com">
-                        <div class="bk-err" id="eEmail">Enter a valid email address</div>
-                    </div>
-                    <div class="bk-field">
-                        <label class="bk-label">Date of Birth <span class="req">*</span></label>
-                        <input type="date" class="bk-input" id="fDob">
-                        <div class="bk-err" id="eDob">You must be at least 21 years old</div>
-                    </div>
+                    <div class="bk-field"><label class="bk-label">ID Proof Type <span class="req">*</span></label><select class="bk-input" id="fIdType"><option value="">Select</option><option value="aadhaar">Aadhaar Card</option><option value="pan">PAN Card</option><option value="passport">Passport</option></select><div class="bk-err" id="eIdType">Please select ID type</div></div>
+                    <div class="bk-field"><label class="bk-label">ID Proof Number <span class="req">*</span></label><input type="text" class="bk-input" id="fIdNum" placeholder="ID number"><div class="bk-err" id="eIdNum">Please enter your ID number</div></div>
                 </div>
-                <div class="bk-field">
-                    <label class="bk-label">Driving License Number <span class="req">*</span></label>
-                    <input type="text" class="bk-input" id="fDL" placeholder="DL number">
-                    <div class="bk-err" id="eDL">Please enter your DL number</div>
-                </div>
-                <div class="bk-field-row">
-                    <div class="bk-field">
-                        <label class="bk-label">ID Proof Type <span class="req">*</span></label>
-                        <select class="bk-input" id="fIdType">
-                            <option value="">Select</option>
-                            <option value="aadhaar">Aadhaar Card</option>
-                            <option value="pan">PAN Card</option>
-                            <option value="passport">Passport</option>
-                        </select>
-                        <div class="bk-err" id="eIdType">Please select ID type</div>
-                    </div>
-                    <div class="bk-field">
-                        <label class="bk-label">ID Proof Number <span class="req">*</span></label>
-                        <input type="text" class="bk-input" id="fIdNum" placeholder="ID number">
-                        <div class="bk-err" id="eIdNum">Please enter your ID number</div>
-                    </div>
-                </div>
-                <div class="bk-field">
-                    <label class="bk-label">Pickup Address</label>
-                    <textarea class="bk-input" id="fAddress" placeholder="Full pickup address (optional)" rows="2"></textarea>
-                </div>
-                <div class="bk-field">
-                    <label class="bk-label">Special Requests</label>
-                    <textarea class="bk-input" id="fRequests" placeholder="Any special requirements..." rows="2"></textarea>
-                </div>
+                <div class="bk-field"><label class="bk-label">Pickup Address</label><textarea class="bk-input" id="fAddress" placeholder="Full pickup address (optional)" rows="2"></textarea></div>
+                <div class="bk-field"><label class="bk-label">Special Requests</label><textarea class="bk-input" id="fRequests" placeholder="Any special requirements..." rows="2"></textarea></div>
             </div>
 
             <!-- STEP 4: Payment -->
             <div class="bk-step" data-step="4">
-                <div class="bk-step-head">
-                    <h3>Payment</h3>
-                    <p>Choose your preferred payment method.</p>
-                </div>
+                <div class="bk-step-head"><h3>Payment</h3><p>Choose your preferred payment method.</p></div>
                 <div class="payment-grid">
-                    <div class="pay-card selected" onclick="selectPay(this,'upi')">
-                        <i class="fas fa-mobile-alt"></i>
-                        <div class="pay-card-label">UPI</div>
-                    </div>
-                    <div class="pay-card" onclick="selectPay(this,'card')">
-                        <i class="fas fa-credit-card"></i>
-                        <div class="pay-card-label">Card</div>
-                    </div>
-                    <div class="pay-card" onclick="selectPay(this,'netbanking')">
-                        <i class="fas fa-university"></i>
-                        <div class="pay-card-label">Net Banking</div>
-                    </div>
+                    <div class="pay-card selected" onclick="selectPay(this,'upi')"><i class="fas fa-mobile-alt"></i><div class="pay-card-label">UPI</div></div>
+                    <div class="pay-card" onclick="selectPay(this,'card')"><i class="fas fa-credit-card"></i><div class="pay-card-label">Card</div></div>
+                    <div class="pay-card" onclick="selectPay(this,'netbanking')"><i class="fas fa-university"></i><div class="pay-card-label">Net Banking</div></div>
                 </div>
-                <div id="upiFields">
-                    <div class="bk-field">
-                        <label class="bk-label">UPI ID <span class="req">*</span></label>
-                        <input type="text" class="bk-input" id="fUpi" placeholder="yourname@upi">
-                        <div class="bk-err" id="eUpi">Enter a valid UPI ID</div>
-                    </div>
+                <div id="upiFields"><div class="bk-field"><label class="bk-label">UPI ID <span class="req">*</span></label><input type="text" class="bk-input" id="fUpi" placeholder="yourname@upi"><div class="bk-err" id="eUpi">Enter a valid UPI ID</div></div></div>
+                <div id="cardFields" style="display:none">
+                    <div class="bk-field"><label class="bk-label">Card Number <span class="req">*</span></label><input type="text" class="bk-input" id="fCardNum" placeholder="XXXX XXXX XXXX XXXX" maxlength="19"><div class="bk-err" id="eCard">Enter a valid card number</div></div>
+                    <div class="bk-field-row"><div class="bk-field"><label class="bk-label">Expiry <span class="req">*</span></label><input type="text" class="bk-input" id="fCardExp" placeholder="MM/YY" maxlength="5"></div><div class="bk-field"><label class="bk-label">CVV <span class="req">*</span></label><input type="password" class="bk-input" id="fCardCvv" placeholder="***" maxlength="4"></div></div>
+                    <div class="bk-field"><label class="bk-label">Cardholder Name <span class="req">*</span></label><input type="text" class="bk-input" id="fCardName" placeholder="Name on card"></div>
                 </div>
-                <div id="cardFields" style="display: none;">
-                    <div class="bk-field">
-                        <label class="bk-label">Card Number <span class="req">*</span></label>
-                        <input type="text" class="bk-input" id="fCardNum" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
-                        <div class="bk-err" id="eCard">Enter a valid card number</div>
-                    </div>
-                    <div class="bk-field-row">
-                        <div class="bk-field">
-                            <label class="bk-label">Expiry <span class="req">*</span></label>
-                            <input type="text" class="bk-input" id="fCardExp" placeholder="MM/YY" maxlength="5">
-                        </div>
-                        <div class="bk-field">
-                            <label class="bk-label">CVV <span class="req">*</span></label>
-                            <input type="password" class="bk-input" id="fCardCvv" placeholder="***" maxlength="4">
-                        </div>
-                    </div>
-                    <div class="bk-field">
-                        <label class="bk-label">Cardholder Name <span class="req">*</span></label>
-                        <input type="text" class="bk-input" id="fCardName" placeholder="Name on card">
-                    </div>
-                </div>
-                <div id="nbFields" style="display: none;">
-                    <div class="bk-field">
-                        <label class="bk-label">Select Bank <span class="req">*</span></label>
-                        <select class="bk-input" id="fBank">
-                            <option value="">Choose bank</option>
-                            <option>State Bank of India</option>
-                            <option>HDFC Bank</option>
-                            <option>ICICI Bank</option>
-                            <option>Axis Bank</option>
-                            <option>Kotak Mahindra Bank</option>
-                            <option>Punjab National Bank</option>
-                            <option>Bank of Baroda</option>
-                            <option>Canara Bank</option>
-                            <option>Union Bank of India</option>
-                            <option>IndusInd Bank</option>
-                        </select>
-                        <div class="bk-err" id="eBank">Please select a bank</div>
-                    </div>
-                </div>
-                <div class="terms-row">
-                    <input type="checkbox" id="fTerms">
-                    <label for="fTerms">I agree to the <a href="#">Terms of Service</a>, <a href="#">Rental Agreement</a>, and <a href="#">Cancellation Policy</a>. I confirm that all details provided are accurate.</label>
-                </div>
+                <div id="nbFields" style="display:none"><div class="bk-field"><label class="bk-label">Select Bank <span class="req">*</span></label><select class="bk-input" id="fBank"><option value="">Choose bank</option><option>State Bank of India</option><option>HDFC Bank</option><option>ICICI Bank</option><option>Axis Bank</option><option>Kotak Mahindra Bank</option><option>Punjab National Bank</option><option>Bank of Baroda</option><option>Canara Bank</option><option>Union Bank of India</option><option>IndusInd Bank</option></select><div class="bk-err" id="eBank">Please select a bank</div></div></div>
+                <div class="terms-row"><input type="checkbox" id="fTerms"><label for="fTerms">I agree to the <a href="#">Terms of Service</a>, <a href="#">Rental Agreement</a>, and <a href="#">Cancellation Policy</a>. I confirm that all details provided are accurate.</label></div>
             </div>
         </div>
 
         <!-- Sidebar -->
         <div class="bk-sidebar" id="bkSidebar">
-            <div class="sidebar-toggle-bar" onclick="toggleSidebar()">
-                <span>Price Summary</span>
+            <div class="sidebar-toggle-bar" id="sidebarToggle" onclick="toggleSidebar()">
+                <div style="display:flex;flex-direction:column;gap:0.125rem">
+                    <span id="toggleLabel" style="font-size:0.6875rem;font-weight:400;color:var(--gray)">Select a vehicle</span>
+                    <span id="togglePrice" style="font-size:1rem;font-weight:700;color:var(--matte-black)"></span>
+                </div>
                 <i class="fas fa-chevron-up"></i>
             </div>
             <div class="sidebar-card">
-                <div class="sidebar-vehicle" id="sidebarVehicle" style="display: none;">
+                <div class="sidebar-vehicle" id="sidebarVehicle" style="display:none">
                     <div class="sidebar-vehicle-img"><img id="sidebarImg" src="" alt=""></div>
-                    <div>
-                        <div class="sidebar-vehicle-name" id="sidebarName"></div>
-                        <div class="sidebar-vehicle-cat" id="sidebarCat"></div>
-                    </div>
+                    <div><div class="sidebar-vehicle-name" id="sidebarName"></div><div class="sidebar-vehicle-cat" id="sidebarCat"></div></div>
                 </div>
                 <div class="sidebar-placeholder" id="sidebarPlaceholder">
-                    <i class="fas fa-car" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block; color: var(--medium-gray);"></i>
+                    <i class="fas fa-car" style="font-size:1.5rem;margin-bottom:0.5rem;display:block;color:var(--medium-gray)"></i>
                     Select a vehicle to see pricing
                 </div>
-                <div class="sidebar-body" id="sidebarBody" style="display: none;">
+                <div class="sidebar-body" id="sidebarBody" style="display:none">
                     <div class="sidebar-title">Price Summary</div>
                     <div id="sidebarBreakdown"></div>
-                    <div class="sidebar-total">
-                        <span>Total</span>
-                        <span class="sidebar-total-value" id="sidebarTotal">₹0</span>
-                    </div>
-                    <div class="sidebar-deposit" id="sidebarDeposit" style="display: none;">
-                        <i class="fas fa-info-circle"></i>
-                        <span id="sidebarDepositText"></span>
-                    </div>
+                    <div class="sidebar-total"><span>Total</span><span class="sidebar-total-value" id="sidebarTotal">₹0</span></div>
+                    <div class="sidebar-deposit" id="sidebarDeposit" style="display:none"><i class="fas fa-info-circle"></i><span id="sidebarDepositText"></span></div>
                 </div>
-                <div class="sidebar-footer" id="sidebarFooter" style="display: none;">
-                    <button class="sidebar-btn" id="sidebarBtn" onclick="goNext()">
-                        Continue <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="sidebar-back" id="sidebarBack" onclick="goBack()" style="display: none;">
-                        <i class="fas fa-arrow-left"></i> Back
-                    </button>
+                <div class="sidebar-footer" id="sidebarFooter" style="display:none">
+                    <button class="sidebar-btn" id="sidebarBtn" onclick="goNext()">Continue <i class="fas fa-arrow-right"></i></button>
+                    <button class="sidebar-back" id="sidebarBack" onclick="goBack()" style="display:none"><i class="fas fa-arrow-left"></i> Back</button>
                 </div>
-                <div class="sidebar-trust">
-                    <i class="fas fa-shield-alt"></i> 256-bit encrypted · Secure payment
-                </div>
+                <div class="sidebar-trust"><i class="fas fa-shield-alt"></i> 256-bit encrypted · Secure payment</div>
             </div>
         </div>
     </div>
 
-    <!-- Confirmation Page -->
+    <!-- Confirmation -->
     <div class="bk-confirm" id="bkConfirm">
         <div class="confirm-icon"><i class="fas fa-check"></i></div>
         <h2 class="confirm-title">Booking Confirmed!</h2>
         <p class="confirm-subtitle">Your premium vehicle has been reserved successfully.</p>
         <div class="confirm-id" id="confirmId">VLD-000000</div>
-        <div class="confirm-card">
-            <div class="confirm-card-header">Booking Details</div>
-            <div class="confirm-card-body" id="confirmDetails"></div>
-        </div>
-        <div class="confirm-card">
-            <div class="confirm-card-header">Customer Information</div>
-            <div class="confirm-card-body" id="confirmCustomer"></div>
-        </div>
+        <div class="confirm-card"><div class="confirm-card-header">Booking Details</div><div class="confirm-card-body" id="confirmDetails"></div></div>
+        <div class="confirm-card"><div class="confirm-card-header">Customer Information</div><div class="confirm-card-body" id="confirmCustomer"></div></div>
         <div class="confirm-actions">
-            <a class="btn-home" href="index.html">
-                <i class="fas fa-home"></i> Back to Home
-            </a>
-            <a class="btn-wa" href="https://wa.me/919876543210" target="_blank">
-                <i class="fab fa-whatsapp"></i> Chat Support
-            </a>
+            <a class="btn-home" href="index.html"><i class="fas fa-home"></i> Back to Home</a>
+            <a class="btn-wa" href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i> Chat Support</a>
         </div>
     </div>
 
-    <footer class="bk-footer">
-        <p>&copy; 2024 Velora Drive. All rights reserved. &middot; <a href="#">Terms</a> &middot; <a href="#">Privacy</a> &middot; <a href="#">Support</a></p>
-    </footer>
-
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <footer class="bk-footer"><p>&copy; 2024 Velora Drive. All rights reserved. &middot; <a href="#">Terms</a> &middot; <a href="#">Privacy</a> &middot; <a href="#">Support</a></p></footer>
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <div class="toast" id="toast"></div>
 
-    <style>
-        .btn-home {
-            padding: 1rem 2.5rem;
-            background: var(--matte-black);
-            color: var(--white);
-            border: none;
-            border-radius: 100px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: var(--font-sans);
-            transition: all 0.3s;
-        }
-        .btn-home:hover { background: var(--black); transform: translateY(-2px); box-shadow: var(--shadow-xl); }
-        .btn-wa {
-            padding: 1rem 2.5rem;
-            background: transparent;
-            color: var(--matte-black);
-            border: 1.5px solid var(--medium-gray);
-            border-radius: 100px;
-            font-size: 1rem;
-            font-weight: 500;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: var(--font-sans);
-            transition: all 0.3s;
-        }
-        .btn-wa:hover { border-color: var(--charcoal); background: var(--light-gray); }
-    </style>
-
     <script>
-    // ==========================================
-    // DATA LAYER - Replace with API calls
-    // ==========================================
-    const fleetData = [
-        { id: 1, name: "BMW 5 Series", category: "Luxury Sedan", price: 8499, deposit: 15000, image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80", transmission: "Automatic", fuel: "Diesel", seats: 5 },
-        { id: 2, name: "Mercedes C-Class", category: "Luxury Sedan", price: 7999, deposit: 12000, image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80", transmission: "Automatic", fuel: "Petrol", seats: 5 },
-        { id: 3, name: "Audi A6", category: "Executive Sedan", price: 8999, deposit: 18000, image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80", transmission: "Automatic", fuel: "Diesel", seats: 5 },
-        { id: 4, name: "Toyota Fortuner", category: "Premium SUV", price: 5999, deposit: 8000, image: "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80", transmission: "Automatic", fuel: "Diesel", seats: 7 },
-        { id: 5, name: "Mahindra Scorpio N", category: "Adventure SUV", price: 4499, deposit: 5000, image: "https://images.unsplash.com/photo-1606611013016-969c19ba27a5?w=800&q=80", transmission: "Manual", fuel: "Diesel", seats: 7 },
-        { id: 6, name: "Range Rover Velar", category: "Luxury SUV", price: 14999, deposit: 25000, image: "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=800&q=80", transmission: "Automatic", fuel: "Petrol", seats: 5 }
+    /* ==========================================
+       DATA - Replace with API calls
+       ========================================== */
+    var fleetData = [
+        {id:1,name:"BMW 5 Series",category:"Luxury Sedan",price:8499,deposit:15000,image:"https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80",transmission:"Automatic",fuel:"Diesel",seats:5},
+        {id:2,name:"Mercedes C-Class",category:"Luxury Sedan",price:7999,deposit:12000,image:"https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80",transmission:"Automatic",fuel:"Petrol",seats:5},
+        {id:3,name:"Audi A6",category:"Executive Sedan",price:8999,deposit:18000,image:"https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80",transmission:"Automatic",fuel:"Diesel",seats:5},
+        {id:4,name:"Toyota Fortuner",category:"Premium SUV",price:5999,deposit:8000,image:"https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80",transmission:"Automatic",fuel:"Diesel",seats:7},
+        {id:5,name:"Mahindra Scorpio N",category:"Adventure SUV",price:4499,deposit:5000,image:"https://images.unsplash.com/photo-1606611013016-969c19ba27a5?w=800&q=80",transmission:"Manual",fuel:"Diesel",seats:7},
+        {id:6,name:"Range Rover Velar",category:"Luxury SUV",price:14999,deposit:25000,image:"https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=800&q=80",transmission:"Automatic",fuel:"Petrol",seats:5}
     ];
+    var coupons = {'FIRST100':{type:'flat',value:1000,label:'₹1,000 off'},'VELORA20':{type:'percent',value:20,label:'20% off',max:3000},'WEEKEND':{type:'flat',value:500,label:'₹500 off'}};
+    var cityNames = {delhi:'Delhi',gurgaon:'Gurgaon',noida:'Noida',chandigarh:'Chandigarh',jaipur:'Jaipur'};
 
-    const coupons = {
-        'FIRST100': { type: 'flat', value: 1000, label: '₹1,000 off' },
-        'VELORA20': { type: 'percent', value: 20, label: '20% off', max: 3000 },
-        'WEEKEND': { type: 'flat', value: 500, label: '₹500 off' }
-    };
+    /* ==========================================
+       STATE
+       ========================================== */
+    var S = {step:1,vehicleId:null,serviceType:'self-drive',pickupLoc:'',dropLoc:'',pickupDate:'',returnDate:'',pickupTime:'10:00',addons:{},coupon:null,name:'',phone:'',email:'',dob:'',dl:'',idType:'',idNum:'',address:'',requests:'',payMethod:'upi',calc:{days:0,base:0,addons:0,discount:0,gst:0,total:0,deposit:0}};
 
-    const cityNames = {
-        delhi: 'Delhi', gurgaon: 'Gurgaon', noida: 'Noida',
-        chandigarh: 'Chandigarh', jaipur: 'Jaipur'
-    };
-
-    // ==========================================
-    // BOOKING STATE
-    // ==========================================
-    let S = {
-        step: 1,
-        vehicleId: null,
-        serviceType: 'self-drive',
-        pickupLoc: '', dropLoc: '',
-        pickupDate: '', returnDate: '',
-        pickupTime: '10:00',
-        addons: {},
-        coupon: null,
-        name: '', phone: '', email: '', dob: '',
-        dl: '', idType: '', idNum: '',
-        address: '', requests: '',
-        payMethod: 'upi',
-        calc: { days: 0, base: 0, addons: 0, discount: 0, gst: 0, total: 0, deposit: 0 }
-    };
-
-    // ==========================================
-    // INIT - Read URL params from index.html
-    // ==========================================
+    /* ==========================================
+       INIT
+       ========================================== */
     document.addEventListener('DOMContentLoaded', function() {
         var params = new URLSearchParams(window.location.search);
         var carId = params.get('car');
@@ -1284,130 +529,95 @@
         renderVehicleGrid();
         setMinDates();
 
-        // Pre-fill from URL params
-        if (carId) {
-            selectVehicle(parseInt(carId));
-            // Skip to step 2 after a short delay for visual feedback
-            setTimeout(function() { goNext(); }, 200);
-        }
-        if (city) {
-            S.pickupLoc = city.toLowerCase();
-            document.getElementById('fPickupLoc').value = S.pickupLoc;
-        }
-        if (pickup) {
-            S.pickupDate = pickup;
-            document.getElementById('fPickupDate').value = pickup;
-        }
-        if (ret) {
-            S.returnDate = ret;
-            document.getElementById('fReturnDate').value = ret;
-        }
+        if (carId) { selectVehicle(parseInt(carId)); setTimeout(function(){goNext()},200); }
+        if (city) { S.pickupLoc = city.toLowerCase(); document.getElementById('fPickupLoc').value = S.pickupLoc; }
+        if (pickup) { S.pickupDate = pickup; document.getElementById('fPickupDate').value = pickup; }
+        if (ret) { S.returnDate = ret; document.getElementById('fReturnDate').value = ret; }
         if (type) {
             S.serviceType = type;
-            document.querySelectorAll('.service-type-card').forEach(function(c) {
+            document.querySelectorAll('.service-type-card').forEach(function(c){
                 c.classList.remove('selected');
                 var t = c.textContent.toLowerCase();
-                if (type === 'chauffeur' && t.includes('chauffeur')) c.classList.add('selected');
-                else if (type === 'airport' && t.includes('airport')) c.classList.add('selected');
-                else if (type === 'self-drive' && t.includes('self')) c.classList.add('selected');
+                if (type==='chauffeur'&&t.includes('chauffeur')) c.classList.add('selected');
+                else if (type==='airport'&&t.includes('airport')) c.classList.add('selected');
+                else if (type==='self-drive'&&t.includes('self')) c.classList.add('selected');
             });
         }
 
-        // Entry animation
-        gsap.from('.bk-hero-tag', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' });
-        gsap.from('.bk-hero-title', { opacity: 0, y: 30, duration: 0.7, delay: 0.1, ease: 'power3.out' });
-        gsap.from('.bk-hero-desc', { opacity: 0, y: 20, duration: 0.6, delay: 0.2, ease: 'power3.out' });
-        gsap.from('.bk-steps', { opacity: 0, y: 20, duration: 0.6, delay: 0.3, ease: 'power3.out' });
+        gsap.from('.bk-hero-tag',{opacity:0,y:20,duration:0.6,ease:'power3.out'});
+        gsap.from('.bk-hero-title',{opacity:0,y:30,duration:0.7,delay:0.1,ease:'power3.out'});
+        gsap.from('.bk-hero-desc',{opacity:0,y:20,duration:0.6,delay:0.2,ease:'power3.out'});
+        gsap.from('.bk-steps',{opacity:0,y:20,duration:0.6,delay:0.3,ease:'power3.out'});
     });
 
     function setMinDates() {
         var today = new Date().toISOString().split('T')[0];
-        document.querySelectorAll('input[type="date"]').forEach(function(el) {
-            if (!el.min) el.min = today;
-        });
+        document.querySelectorAll('input[type="date"]').forEach(function(el){ if(!el.min) el.min = today; });
     }
 
-    // ==========================================
-    // RENDER VEHICLE GRID
-    // ==========================================
+    /* ==========================================
+       VEHICLE GRID
+       ========================================== */
     function renderVehicleGrid() {
-        document.getElementById('bkVehicleGrid').innerHTML = fleetData.map(function(c) {
-            return '<div class="bk-vehicle-card" id="bvc-' + c.id + '" onclick="selectVehicle(' + c.id + ')">' +
-                '<div class="bk-vehicle-card-img"><img src="' + c.image + '" alt="' + c.name + '" loading="lazy"></div>' +
-                '<div class="bk-vehicle-card-info">' +
-                    '<div class="bk-vehicle-card-name">' + c.name + '</div>' +
-                    '<div class="bk-vehicle-card-cat">' + c.category + '</div>' +
-                    '<div class="bk-vehicle-card-specs">' +
-                        '<span class="bk-vehicle-card-spec"><i class="fas fa-cog"></i> ' + c.transmission + '</span>' +
-                        '<span class="bk-vehicle-card-spec"><i class="fas fa-gas-pump"></i> ' + c.fuel + '</span>' +
-                        '<span class="bk-vehicle-card-spec"><i class="fas fa-users"></i> ' + c.seats + ' Seats</span>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="bk-vehicle-card-right">' +
-                    '<div class="bk-vehicle-card-price">\u20B9' + c.price.toLocaleString() + '</div>' +
-                    '<div class="bk-vehicle-card-period">per day</div>' +
-                    '<div class="bk-vehicle-card-check"><i class="fas fa-check"></i></div>' +
-                '</div>' +
-            '</div>';
+        document.getElementById('bkVehicleGrid').innerHTML = fleetData.map(function(c){
+            return '<div class="bk-vehicle-card" id="bvc-'+c.id+'" onclick="selectVehicle('+c.id+')">'+
+                '<div class="bk-vehicle-card-img"><img src="'+c.image+'" alt="'+c.name+'" loading="lazy"></div>'+
+                '<div class="bk-vehicle-card-info"><div class="bk-vehicle-card-name">'+c.name+'</div><div class="bk-vehicle-card-cat">'+c.category+'</div>'+
+                '<div class="bk-vehicle-card-specs"><span class="bk-vehicle-card-spec"><i class="fas fa-cog"></i> '+c.transmission+'</span><span class="bk-vehicle-card-spec"><i class="fas fa-gas-pump"></i> '+c.fuel+'</span><span class="bk-vehicle-card-spec"><i class="fas fa-users"></i> '+c.seats+'</span></div></div>'+
+                '<div class="bk-vehicle-card-right"><div class="bk-vehicle-card-price">\u20B9'+c.price.toLocaleString()+'</div><div class="bk-vehicle-card-period">per day</div><div class="bk-vehicle-card-check"><i class="fas fa-check"></i></div></div></div>';
         }).join('');
     }
 
-    // ==========================================
-    // SELECTION HANDLERS
-    // ==========================================
+    /* ==========================================
+       SELECTION HANDLERS
+       ========================================== */
     function selectVehicle(id) {
         S.vehicleId = id;
-        document.querySelectorAll('.bk-vehicle-card').forEach(function(c) {
-            c.classList.remove('selected');
-        });
-        document.getElementById('bvc-' + id).classList.add('selected');
+        document.querySelectorAll('.bk-vehicle-card').forEach(function(c){c.classList.remove('selected')});
+        document.getElementById('bvc-'+id).classList.add('selected');
+        var car = fleetData.find(function(c){return c.id===id});
 
-        var car = fleetData.find(function(c) { return c.id === id; });
-
-        // Update sidebar
         document.getElementById('sidebarVehicle').style.display = 'flex';
         document.getElementById('sidebarImg').src = car.image;
         document.getElementById('sidebarName').textContent = car.name;
-        document.getElementById('sidebarCat').textContent = car.category + ' \u00B7 ' + car.transmission + ' \u00B7 ' + car.fuel;
+        document.getElementById('sidebarCat').textContent = car.category+' \u00B7 '+car.transmission+' \u00B7 '+car.fuel;
         document.getElementById('sidebarPlaceholder').style.display = 'none';
         document.getElementById('sidebarBody').style.display = 'block';
         document.getElementById('sidebarFooter').style.display = 'block';
         S.calc.deposit = car.deposit;
 
+        document.getElementById('toggleLabel').textContent = car.name;
+
         calcPrice();
+        updateTogglePrice();
     }
 
-   function selectService(el, type) {
-    S.serviceType = type;
-    document.querySelectorAll('.service-type-card').forEach(function(c) {
-        c.classList.remove('selected');
-    });
-    el.classList.add('selected');
-    calcPrice(); // This now handles preview mode correctly
-}
+    function selectService(el, type) {
+        S.serviceType = type;
+        document.querySelectorAll('.service-type-card').forEach(function(c){c.classList.remove('selected')});
+        el.classList.add('selected');
+        calcPrice();
+        updateTogglePrice();
+    }
 
     function toggleAddon(el, key, price) {
         el.classList.toggle('selected');
-        if (el.classList.contains('selected')) {
-            S.addons[key] = price;
-        } else {
-            delete S.addons[key];
-        }
+        if (el.classList.contains('selected')) S.addons[key] = price; else delete S.addons[key];
         calcPrice();
+        updateTogglePrice();
     }
 
     function applyCoupon() {
         var code = document.getElementById('couponInput').value.trim().toUpperCase();
         if (!code) return;
         if (coupons[code]) {
-            S.coupon = Object.assign({ code: code }, coupons[code]);
-            document.getElementById('couponText').textContent = coupons[code].label + ' (' + code + ')';
+            S.coupon = Object.assign({code:code}, coupons[code]);
+            document.getElementById('couponText').textContent = coupons[code].label+' ('+code+')';
             document.getElementById('couponApplied').classList.add('show');
             calcPrice();
+            updateTogglePrice();
             showToast('Coupon applied!');
-        } else {
-            showToast('Invalid coupon code');
-        }
+        } else showToast('Invalid coupon code');
     }
 
     function removeCoupon() {
@@ -1415,132 +625,116 @@
         document.getElementById('couponApplied').classList.remove('show');
         document.getElementById('couponInput').value = '';
         calcPrice();
+        updateTogglePrice();
     }
 
     function selectPay(el, method) {
         S.payMethod = method;
-        document.querySelectorAll('.pay-card').forEach(function(c) {
-            c.classList.remove('selected');
-        });
+        document.querySelectorAll('.pay-card').forEach(function(c){c.classList.remove('selected')});
         el.classList.add('selected');
-        document.getElementById('upiFields').style.display = method === 'upi' ? 'block' : 'none';
-        document.getElementById('cardFields').style.display = method === 'card' ? 'block' : 'none';
-        document.getElementById('nbFields').style.display = method === 'netbanking' ? 'block' : 'none';
+        document.getElementById('upiFields').style.display = method==='upi'?'block':'none';
+        document.getElementById('cardFields').style.display = method==='card'?'block':'none';
+        document.getElementById('nbFields').style.display = method==='netbanking'?'block':'none';
     }
 
-    // ==========================================
-    // PRICE CALCULATION
-    // ==========================================
-    // ==========================================
-// PRICE CALCULATION
-// ==========================================
-// ==========================================
-// PRICE CALCULATION
-// ==========================================
-function calcPrice() {
-    if (!S.vehicleId) return;
-    var car = fleetData.find(function(c) { return c.id === S.vehicleId; });
-    var pd = document.getElementById('fPickupDate').value;
-    var rd = document.getElementById('fReturnDate').value;
+    /* ==========================================
+       PRICE CALCULATION - Always 2 args
+       ========================================== */
+    function calcPrice() {
+        if (!S.vehicleId) return;
+        var car = fleetData.find(function(c){return c.id===S.vehicleId});
+        var pd = document.getElementById('fPickupDate').value;
+        var rd = document.getElementById('fReturnDate').value;
 
-    if (!pd || !rd) {
-        updateSidebar(car, true);
-        return;
-    }
-
-    var d1 = new Date(pd);
-    var d2 = new Date(rd);
-    var days = Math.ceil((d2 - d1) / 86400000);
-    if (days <= 0) days = 1;
-
-    var rate = car.price;
-    if (S.serviceType === 'chauffeur') rate += 1500;
-    if (S.serviceType === 'airport') rate += 800;
-    var base = rate * days;
-
-    var addonT = 0;
-    Object.values(S.addons).forEach(function(p) { addonT += p * days; });
-
-    var disc = 0;
-    if (S.coupon) {
-        if (S.coupon.type === 'flat') {
-            disc = S.coupon.value;
-        } else {
-            disc = Math.min(base * S.coupon.value / 100, S.coupon.max || Infinity);
+        if (!pd || !rd) {
+            updateSidebar(car, true);
+            return;
         }
-    }
 
-    var sub = base + addonT - disc;
-    var gst = Math.round(sub * 0.18);
-    var total = sub + gst;
+        var d1 = new Date(pd), d2 = new Date(rd);
+        var days = Math.ceil((d2-d1)/86400000);
+        if (days <= 0) days = 1;
 
-    S.calc = { days: days, base: base, addons: addonT, discount: disc, gst: gst, total: total, deposit: car.deposit };
-    updateSidebar(car, false);
-
-    if (S.serviceType === 'self-drive') {
-        document.getElementById('depositText').textContent = 'A refundable security deposit of \u20B9' + car.deposit.toLocaleString() + ' will be collected at pickup. Fully refundable within 7 working days after vehicle return.';
-        document.getElementById('depositNotice').style.display = 'flex';
-    } else {
-        document.getElementById('depositNotice').style.display = 'none';
-    }
-}
-
-function updateSidebar(car, isPreview) {
-    var html = '';
-    var c = S.calc;
-
-    if (isPreview) {
         var rate = car.price;
         if (S.serviceType === 'chauffeur') rate += 1500;
         if (S.serviceType === 'airport') rate += 800;
+        var base = rate * days;
 
-        html += '<div class="sidebar-row"><span class="sidebar-row-label">' + car.name + '</span><span class="sidebar-row-value">\u20B9' + rate.toLocaleString() + '/day</span></div>';
+        var addonT = 0;
+        Object.values(S.addons).forEach(function(p){addonT += p*days});
 
-        if (S.serviceType === 'chauffeur') {
-            html += '<div class="sidebar-row"><span class="sidebar-row-label">Chauffeur surcharge</span><span class="sidebar-row-value">+\u20B9' + (1500).toLocaleString() + '/day</span></div>';
+        var disc = 0;
+        if (S.coupon) {
+            if (S.coupon.type === 'flat') disc = S.coupon.value;
+            else disc = Math.min(base*S.coupon.value/100, S.coupon.max||Infinity);
         }
-        if (S.serviceType === 'airport') {
-            html += '<div class="sidebar-row"><span class="sidebar-row-label">Airport surcharge</span><span class="sidebar-row-value">+\u20B9' + (800).toLocaleString() + '/day</span></div>';
-        }
 
-        html += '<div style="padding: 0.75rem 0; text-align: center; font-size: 0.8125rem; color: var(--gray);"><i class="fas fa-calendar-alt" style="margin-right: 0.375rem;"></i>Select dates to calculate total</div>';
+        var sub = base + addonT - disc;
+        var gst = Math.round(sub * 0.18);
+        var total = sub + gst;
 
-        document.getElementById('sidebarBreakdown').innerHTML = html;
-        document.getElementById('sidebarTotal').textContent = '\u20B9' + rate.toLocaleString() + '/day';
+        S.calc = {days:days, base:base, addons:addonT, discount:disc, gst:gst, total:total, deposit:car.deposit};
+        updateSidebar(car, false);
 
-    } else {
-        html += '<div class="sidebar-row"><span class="sidebar-row-label">' + car.name + ' \u00D7 ' + c.days + ' day' + (c.days !== 1 ? 's' : '') + '</span><span class="sidebar-row-value">\u20B9' + c.base.toLocaleString() + '</span></div>';
-
-        if (S.serviceType === 'chauffeur') {
-            html += '<div class="sidebar-row"><span class="sidebar-row-label">Chauffeur \u00D7 ' + c.days + 'd</span><span class="sidebar-row-value">\u20B9' + (1500 * c.days).toLocaleString() + '</span></div>';
+        if (S.serviceType === 'self-drive') {
+            document.getElementById('depositText').textContent = 'A refundable security deposit of \u20B9'+car.deposit.toLocaleString()+' will be collected at pickup. Fully refundable within 7 working days after vehicle return.';
+            document.getElementById('depositNotice').style.display = 'flex';
+        } else {
+            document.getElementById('depositNotice').style.display = 'none';
         }
-        if (S.serviceType === 'airport') {
-            html += '<div class="sidebar-row"><span class="sidebar-row-label">Airport surcharge \u00D7 ' + c.days + 'd</span><span class="sidebar-row-value">\u20B9' + (800 * c.days).toLocaleString() + '</span></div>';
-        }
-        if (c.addons > 0) {
-            html += '<div class="sidebar-row"><span class="sidebar-row-label">Add-ons</span><span class="sidebar-row-value">\u20B9' + c.addons.toLocaleString() + '</span></div>';
-        }
-        if (c.discount > 0) {
-            html += '<div class="sidebar-row discount"><span class="sidebar-row-label">Discount</span><span class="sidebar-row-value">-\u20B9' + c.discount.toLocaleString() + '</span></div>';
-        }
-        html += '<hr class="sidebar-divider"><div class="sidebar-row"><span class="sidebar-row-label">GST (18%)</span><span class="sidebar-row-value">\u20B9' + c.gst.toLocaleString() + '</span></div>';
-
-        document.getElementById('sidebarBreakdown').innerHTML = html;
-        document.getElementById('sidebarTotal').textContent = '\u20B9' + c.total.toLocaleString();
     }
 
-    var dep = document.getElementById('sidebarDeposit');
-    if (S.serviceType === 'self-drive' && car) {
-        dep.style.display = 'flex';
-        document.getElementById('sidebarDepositText').textContent = '+ \u20B9' + car.deposit.toLocaleString() + ' deposit at pickup';
-    } else {
-        dep.style.display = 'none';
-    }
-}
+    function updateSidebar(car, isPreview) {
+        var html = '';
+        var c = S.calc;
 
-    // ==========================================
-    // STEP NAVIGATION
-    // ==========================================
+        if (isPreview) {
+            var rate = car.price;
+            if (S.serviceType === 'chauffeur') rate += 1500;
+            if (S.serviceType === 'airport') rate += 800;
+            html += '<div class="sidebar-row"><span class="sidebar-row-label">'+car.name+'</span><span class="sidebar-row-value">\u20B9'+rate.toLocaleString()+'/day</span></div>';
+            if (S.serviceType === 'chauffeur') html += '<div class="sidebar-row"><span class="sidebar-row-label">Chauffeur surcharge</span><span class="sidebar-row-value">+\u20B91,500/day</span></div>';
+            if (S.serviceType === 'airport') html += '<div class="sidebar-row"><span class="sidebar-row-label">Airport surcharge</span><span class="sidebar-row-value">+\u20B9800/day</span></div>';
+            html += '<div style="padding:0.75rem 0;text-align:center;font-size:0.8125rem;color:var(--gray)"><i class="fas fa-calendar-alt" style="margin-right:0.375rem"></i>Select dates to calculate total</div>';
+            document.getElementById('sidebarBreakdown').innerHTML = html;
+            document.getElementById('sidebarTotal').textContent = '\u20B9'+rate.toLocaleString()+'/day';
+        } else {
+            html += '<div class="sidebar-row"><span class="sidebar-row-label">'+car.name+' \u00D7 '+c.days+' day'+(c.days!==1?'s':'')+'</span><span class="sidebar-row-value">\u20B9'+c.base.toLocaleString()+'</span></div>';
+            if (S.serviceType === 'chauffeur') html += '<div class="sidebar-row"><span class="sidebar-row-label">Chauffeur \u00D7 '+c.days+'d</span><span class="sidebar-row-value">\u20B9'+(1500*c.days).toLocaleString()+'</span></div>';
+            if (S.serviceType === 'airport') html += '<div class="sidebar-row"><span class="sidebar-row-label">Airport surcharge \u00D7 '+c.days+'d</span><span class="sidebar-row-value">\u20B9'+(800*c.days).toLocaleString()+'</span></div>';
+            if (c.addons > 0) html += '<div class="sidebar-row"><span class="sidebar-row-label">Add-ons</span><span class="sidebar-row-value">\u20B9'+c.addons.toLocaleString()+'</span></div>';
+            if (c.discount > 0) html += '<div class="sidebar-row discount"><span class="sidebar-row-label">Discount</span><span class="sidebar-row-value">-\u20B9'+c.discount.toLocaleString()+'</span></div>';
+            html += '<hr class="sidebar-divider"><div class="sidebar-row"><span class="sidebar-row-label">GST (18%)</span><span class="sidebar-row-value">\u20B9'+c.gst.toLocaleString()+'</span></div>';
+            document.getElementById('sidebarBreakdown').innerHTML = html;
+            document.getElementById('sidebarTotal').textContent = '\u20B9'+c.total.toLocaleString();
+        }
+
+        var dep = document.getElementById('sidebarDeposit');
+        if (S.serviceType === 'self-drive' && car) {
+            dep.style.display = 'flex';
+            document.getElementById('sidebarDepositText').textContent = '+ \u20B9'+car.deposit.toLocaleString()+' refundable deposit at pickup';
+        } else {
+            dep.style.display = 'none';
+        }
+    }
+
+    function updateTogglePrice() {
+        var el = document.getElementById('togglePrice');
+        if (!S.vehicleId) { el.textContent = ''; return; }
+        if (S.calc.total > 0) {
+            el.textContent = '\u20B9'+S.calc.total.toLocaleString()+' total';
+        } else {
+            var car = fleetData.find(function(c){return c.id===S.vehicleId});
+            var rate = car.price;
+            if (S.serviceType === 'chauffeur') rate += 1500;
+            if (S.serviceType === 'airport') rate += 800;
+            el.textContent = '\u20B9'+rate.toLocaleString()+'/day';
+        }
+    }
+
+    /* ==========================================
+       STEP NAVIGATION
+       ========================================== */
     function goNext() {
         if (!validate()) return;
         collectData();
@@ -1548,9 +742,7 @@ function updateSidebar(car, isPreview) {
         if (S.step === 4) { processPayment(); return; }
         S.step++;
         updateUI();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-
-        // Collapse mobile sidebar when advancing
+        window.scrollTo({top:0,behavior:'smooth'});
         document.getElementById('bkSidebar').classList.remove('expanded');
     }
 
@@ -1558,40 +750,33 @@ function updateSidebar(car, isPreview) {
         if (S.step <= 1) return;
         S.step--;
         updateUI();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({top:0,behavior:'smooth'});
         document.getElementById('bkSidebar').classList.remove('expanded');
     }
 
     function updateUI() {
-        // Progress steps
-        document.querySelectorAll('.bk-step-ind').forEach(function(el) {
+        document.querySelectorAll('.bk-step-ind').forEach(function(el){
             var s = parseInt(el.dataset.step);
-            el.classList.remove('active', 'completed');
+            el.classList.remove('active','completed');
             if (s === S.step) el.classList.add('active');
             else if (s < S.step) el.classList.add('completed');
         });
-
-        // Step content
-        document.querySelectorAll('.bk-step').forEach(function(el) {
+        document.querySelectorAll('.bk-step').forEach(function(el){
             el.classList.toggle('active', parseInt(el.dataset.step) === S.step);
         });
 
-        // Sidebar buttons
         var btn = document.getElementById('sidebarBtn');
         var back = document.getElementById('sidebarBack');
         back.style.display = S.step > 1 ? 'flex' : 'none';
 
         if (S.step === 4) {
-            btn.innerHTML = '<i class="fas fa-lock" style="margin-right: 0.5rem;"></i> Pay \u20B9' + S.calc.total.toLocaleString();
+            btn.innerHTML = '<i class="fas fa-lock" style="margin-right:0.5rem"></i> Pay \u20B9'+S.calc.total.toLocaleString();
         } else {
             btn.innerHTML = 'Continue <i class="fas fa-arrow-right"></i>';
         }
 
-        // Animate step content
         var activeStep = document.querySelector('.bk-step.active');
-        if (activeStep) {
-            gsap.from(activeStep.children, { opacity: 0, y: 20, duration: 0.5, stagger: 0.08, ease: 'power3.out' });
-        }
+        if (activeStep) gsap.from(activeStep.children, {opacity:0,y:20,duration:0.5,stagger:0.08,ease:'power3.out'});
     }
 
     function collectData() {
@@ -1615,185 +800,139 @@ function updateSidebar(car, isPreview) {
         }
     }
 
-    // ==========================================
-    // VALIDATION
-    // ==========================================
+    /* ==========================================
+       VALIDATION
+       ========================================== */
     function validate() {
         clearErrors();
-
         if (S.step === 1) {
             if (!S.vehicleId) { showToast('Please select a vehicle'); return false; }
             return true;
         }
-
         if (S.step === 2) {
             var ok = true;
-            if (!document.getElementById('fPickupLoc').value) { showErr('fPickupLoc', 'ePickupLoc'); ok = false; }
-            if (!document.getElementById('fPickupDate').value) { showErr('fPickupDate', 'ePickupDate'); ok = false; }
-            else if (!document.getElementById('fReturnDate').value) { showErr('fReturnDate', 'eReturnDate'); ok = false; }
+            if (!document.getElementById('fPickupLoc').value) { showErr('fPickupLoc','ePickupLoc'); ok = false; }
+            if (!document.getElementById('fPickupDate').value) { showErr('fPickupDate','ePickupDate'); ok = false; }
+            else if (!document.getElementById('fReturnDate').value) { showErr('fReturnDate','eReturnDate'); ok = false; }
             else {
                 var p = new Date(document.getElementById('fPickupDate').value);
                 var r = new Date(document.getElementById('fReturnDate').value);
-                if (r <= p) {
-                    document.getElementById('eReturnDate').textContent = 'Return must be after pickup';
-                    showErr('fReturnDate', 'eReturnDate');
-                    ok = false;
-                }
+                if (r <= p) { document.getElementById('eReturnDate').textContent = 'Return must be after pickup'; showErr('fReturnDate','eReturnDate'); ok = false; }
             }
             if (!ok) showToast('Please fill all required fields');
             return ok;
         }
-
         if (S.step === 3) {
             var ok = true;
-            if (!document.getElementById('fName').value.trim()) { showErr('fName', 'eName'); ok = false; }
-            if (!/^\d{10}$/.test(document.getElementById('fPhone').value.trim())) { showErr('fPhone', 'ePhone'); ok = false; }
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('fEmail').value.trim())) { showErr('fEmail', 'eEmail'); ok = false; }
+            if (!document.getElementById('fName').value.trim()) { showErr('fName','eName'); ok = false; }
+            if (!/^\d{10}$/.test(document.getElementById('fPhone').value.trim())) { showErr('fPhone','ePhone'); ok = false; }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('fEmail').value.trim())) { showErr('fEmail','eEmail'); ok = false; }
             var dob = document.getElementById('fDob').value;
-            if (!dob || Math.floor((new Date() - new Date(dob)) / (365.25 * 86400000)) < 21) { showErr('fDob', 'eDob'); ok = false; }
-            if (!document.getElementById('fDL').value.trim()) { showErr('fDL', 'eDL'); ok = false; }
-            if (!document.getElementById('fIdType').value) { showErr('fIdType', 'eIdType'); ok = false; }
-            if (!document.getElementById('fIdNum').value.trim()) { showErr('fIdNum', 'eIdNum'); ok = false; }
+            if (!dob || Math.floor((new Date()-new Date(dob))/(365.25*86400000)) < 21) { showErr('fDob','eDob'); ok = false; }
+            if (!document.getElementById('fDL').value.trim()) { showErr('fDL','eDL'); ok = false; }
+            if (!document.getElementById('fIdType').value) { showErr('fIdType','eIdType'); ok = false; }
+            if (!document.getElementById('fIdNum').value.trim()) { showErr('fIdNum','eIdNum'); ok = false; }
             if (!ok) showToast('Please fill all required fields');
             return ok;
         }
-
         if (S.step === 4) {
             if (!document.getElementById('fTerms').checked) { showToast('Please agree to the terms'); return false; }
             if (S.payMethod === 'upi') {
                 var u = document.getElementById('fUpi').value.trim();
-                if (!u || !u.includes('@')) { showErr('fUpi', 'eUpi'); showToast('Enter a valid UPI ID'); return false; }
+                if (!u || !u.includes('@')) { showErr('fUpi','eUpi'); showToast('Enter a valid UPI ID'); return false; }
             }
             return true;
         }
-
         return true;
     }
 
-    function showErr(inputId, errId) {
-        document.getElementById(inputId).classList.add('error');
-        document.getElementById(errId).classList.add('show');
-    }
+    function showErr(inputId, errId) { document.getElementById(inputId).classList.add('error'); document.getElementById(errId).classList.add('show'); }
+    function clearErrors() { document.querySelectorAll('.bk-err').forEach(function(e){e.classList.remove('show')}); document.querySelectorAll('.bk-input.error').forEach(function(e){e.classList.remove('error')}); }
 
-    function clearErrors() {
-        document.querySelectorAll('.bk-err').forEach(function(e) { e.classList.remove('show'); });
-        document.querySelectorAll('.bk-input.error').forEach(function(e) { e.classList.remove('error'); });
-    }
-
-    // ==========================================
-    // PAYMENT PROCESSING
-    // ==========================================
+    /* ==========================================
+       PAYMENT
+       ========================================== */
     function processPayment() {
         var btn = document.getElementById('sidebarBtn');
         btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i> Processing...';
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:0.5rem"></i> Processing...';
 
-        // Simulate payment processing delay
         setTimeout(function() {
             btn.disabled = false;
-
             var bookingId = 'VLD-' + Date.now().toString().slice(-6);
-            var car = fleetData.find(function(c) { return c.id === S.vehicleId; });
+            var car = fleetData.find(function(c){return c.id===S.vehicleId});
             var c = S.calc;
-            var sType = S.serviceType === 'self-drive' ? 'Self-Drive' : S.serviceType === 'chauffeur' ? 'With Chauffeur' : 'Airport Pickup';
-            var payLabel = S.payMethod === 'upi' ? 'UPI' : S.payMethod === 'card' ? 'Credit/Debit Card' : 'Net Banking';
+            var sType = S.serviceType==='self-drive'?'Self-Drive':S.serviceType==='chauffeur'?'With Chauffeur':'Airport Pickup';
+            var payLabel = S.payMethod==='upi'?'UPI':S.payMethod==='card'?'Credit/Debit Card':'Net Banking';
 
-            // Build booking details
-            var html = '' +
-                '<div class="confirm-row"><span class="confirm-row-label">Vehicle</span><span class="confirm-row-value">' + car.name + '</span></div>' +
-                '<div class="confirm-row"><span class="confirm-row-label">Service</span><span class="confirm-row-value">' + sType + '</span></div>' +
-                '<div class="confirm-row"><span class="confirm-row-label">Pickup</span><span class="confirm-row-value">' + (cityNames[S.pickupLoc] || S.pickupLoc) + ', ' + fmtDate(S.pickupDate) + ' ' + S.pickupTime + '</span></div>' +
-                '<div class="confirm-row"><span class="confirm-row-label">Return</span><span class="confirm-row-value">' + (cityNames[S.dropLoc] || cityNames[S.pickupLoc] || 'Same') + ', ' + fmtDate(S.returnDate) + '</span></div>' +
-                '<div class="confirm-row"><span class="confirm-row-label">Duration</span><span class="confirm-row-value">' + c.days + ' day' + (c.days > 1 ? 's' : '') + '</span></div>' +
-                '<hr class="sidebar-divider" style="margin: 0.5rem 0;">' +
-                '<div class="confirm-row"><span class="confirm-row-label">Base Fare</span><span class="confirm-row-value">\u20B9' + c.base.toLocaleString() + '</span></div>';
-
-            if (c.addons > 0) {
-                html += '<div class="confirm-row"><span class="confirm-row-label">Add-ons</span><span class="confirm-row-value">\u20B9' + c.addons.toLocaleString() + '</span></div>';
-            }
-            if (c.discount > 0) {
-                html += '<div class="confirm-row green"><span class="confirm-row-label">Discount</span><span class="confirm-row-value">-\u20B9' + c.discount.toLocaleString() + '</span></div>';
-            }
-            html += '' +
-                '<div class="confirm-row"><span class="confirm-row-label">GST (18%)</span><span class="confirm-row-value">\u20B9' + c.gst.toLocaleString() + '</span></div>' +
-                '<div class="confirm-row highlight"><span class="confirm-row-label">Total Paid</span><span class="confirm-row-value">\u20B9' + c.total.toLocaleString() + '</span></div>';
-
-            if (S.serviceType === 'self-drive') {
-                html += '<div class="confirm-row warn"><span class="confirm-row-label">Security Deposit</span><span class="confirm-row-value">\u20B9' + c.deposit.toLocaleString() + ' (at pickup)</span></div>';
-            }
-
+            var html = '<div class="confirm-row"><span class="confirm-row-label">Vehicle</span><span class="confirm-row-value">'+car.name+'</span></div>'+
+                '<div class="confirm-row"><span class="confirm-row-label">Service</span><span class="confirm-row-value">'+sType+'</span></div>'+
+                '<div class="confirm-row"><span class="confirm-row-label">Pickup</span><span class="confirm-row-value">'+(cityNames[S.pickupLoc]||S.pickupLoc)+', '+fmtDate(S.pickupDate)+' '+S.pickupTime+'</span></div>'+
+                '<div class="confirm-row"><span class="confirm-row-label">Return</span><span class="confirm-row-value">'+(cityNames[S.dropLoc]||cityNames[S.pickupLoc]||'Same')+', '+fmtDate(S.returnDate)+'</span></div>'+
+                '<div class="confirm-row"><span class="confirm-row-label">Duration</span><span class="confirm-row-value">'+c.days+' day'+(c.days>1?'s':'')+'</span></div>'+
+                '<hr class="sidebar-divider" style="margin:0.5rem 0">'+
+                '<div class="confirm-row"><span class="confirm-row-label">Base Fare</span><span class="confirm-row-value">\u20B9'+c.base.toLocaleString()+'</span></div>';
+            if (c.addons>0) html += '<div class="confirm-row"><span class="confirm-row-label">Add-ons</span><span class="confirm-row-value">\u20B9'+c.addons.toLocaleString()+'</span></div>';
+            if (c.discount>0) html += '<div class="confirm-row green"><span class="confirm-row-label">Discount</span><span class="confirm-row-value">-\u20B9'+c.discount.toLocaleString()+'</span></div>';
+            html += '<div class="confirm-row"><span class="confirm-row-label">GST (18%)</span><span class="confirm-row-value">\u20B9'+c.gst.toLocaleString()+'</span></div>'+
+                '<div class="confirm-row highlight"><span class="confirm-row-label">Total Paid</span><span class="confirm-row-value">\u20B9'+c.total.toLocaleString()+'</span></div>';
+            if (S.serviceType==='self-drive') html += '<div class="confirm-row warn"><span class="confirm-row-label">Security Deposit</span><span class="confirm-row-value">\u20B9'+c.deposit.toLocaleString()+' (at pickup)</span></div>';
             document.getElementById('confirmDetails').innerHTML = html;
 
-            // Build customer details
-            var idTypeLabel = S.idType === 'aadhaar' ? 'Aadhaar Card' : S.idType === 'pan' ? 'PAN Card' : 'Passport';
-            document.getElementById('confirmCustomer').innerHTML = '' +
-                '<div class="confirm-row"><span class="confirm-row-label">Name</span><span class="confirm-row-value">' + S.name + '</span></div>' +
-                '<div class="confirm-row"><span class="confirm-row-label">Phone</span><span class="confirm-row-value">+91 ' + S.phone + '</span></div>' +
-                '<div class="confirm-row"><span class="confirm-row-label">Email</span><span class="confirm-row-value">' + S.email + '</span></div>' +
-                '<div class="confirm-row"><span class="confirm-row-label">DL Number</span><span class="confirm-row-value">' + S.dl + '</span></div>' +
-                '<div class="confirm-row"><span class="confirm-row-label">ID Proof</span><span class="confirm-row-value">' + idTypeLabel + ' - ' + S.idNum + '</span></div>' +
-                '<div class="confirm-row"><span class="confirm-row-label">Payment</span><span class="confirm-row-value">' + payLabel + '</span></div>' +
+            var idLabel = S.idType==='aadhaar'?'Aadhaar Card':S.idType==='pan'?'PAN Card':'Passport';
+            document.getElementById('confirmCustomer').innerHTML =
+                '<div class="confirm-row"><span class="confirm-row-label">Name</span><span class="confirm-row-value">'+S.name+'</span></div>'+
+                '<div class="confirm-row"><span class="confirm-row-label">Phone</span><span class="confirm-row-value">+91 '+S.phone+'</span></div>'+
+                '<div class="confirm-row"><span class="confirm-row-label">Email</span><span class="confirm-row-value">'+S.email+'</span></div>'+
+                '<div class="confirm-row"><span class="confirm-row-label">DL Number</span><span class="confirm-row-value">'+S.dl+'</span></div>'+
+                '<div class="confirm-row"><span class="confirm-row-label">ID Proof</span><span class="confirm-row-value">'+idLabel+' - '+S.idNum+'</span></div>'+
+                '<div class="confirm-row"><span class="confirm-row-label">Payment</span><span class="confirm-row-value">'+payLabel+'</span></div>'+
                 '<div class="confirm-row green"><span class="confirm-row-label">Status</span><span class="confirm-row-value">Confirmed</span></div>';
 
             document.getElementById('confirmId').textContent = bookingId;
-
-            // Hide form, show confirmation
             document.getElementById('bkHero').style.display = 'none';
             document.getElementById('bkProgress').style.display = 'none';
             document.getElementById('bkLayout').style.display = 'none';
             document.getElementById('bkSidebar').style.display = 'none';
             document.getElementById('bkConfirm').classList.add('active');
+            window.scrollTo({top:0,behavior:'smooth'});
 
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Animate confirmation
-            gsap.from('.confirm-icon', { scale: 0, duration: 0.6, ease: 'back.out(1.7)' });
-            gsap.from('.confirm-title', { opacity: 0, y: 20, duration: 0.5, delay: 0.3, ease: 'power3.out' });
-            gsap.from('.confirm-subtitle', { opacity: 0, y: 20, duration: 0.5, delay: 0.4, ease: 'power3.out' });
-            gsap.from('.confirm-id', { opacity: 0, y: 20, duration: 0.5, delay: 0.5, ease: 'power3.out' });
-            gsap.from('.confirm-card', { opacity: 0, y: 30, duration: 0.6, delay: 0.6, stagger: 0.15, ease: 'power3.out' });
-            gsap.from('.confirm-actions', { opacity: 0, y: 20, duration: 0.5, delay: 1, ease: 'power3.out' });
-
+            gsap.from('.confirm-icon',{scale:0,duration:0.6,ease:'back.out(1.7)'});
+            gsap.from('.confirm-title',{opacity:0,y:20,duration:0.5,delay:0.3,ease:'power3.out'});
+            gsap.from('.confirm-subtitle',{opacity:0,y:20,duration:0.5,delay:0.4,ease:'power3.out'});
+            gsap.from('.confirm-id',{opacity:0,y:20,duration:0.5,delay:0.5,ease:'power3.out'});
+            gsap.from('.confirm-card',{opacity:0,y:30,duration:0.6,delay:0.6,stagger:0.15,ease:'power3.out'});
+            gsap.from('.confirm-actions',{opacity:0,y:20,duration:0.5,delay:1,ease:'power3.out'});
         }, 2500);
     }
 
-    // ==========================================
-    // MOBILE SIDEBAR TOGGLE
-    // ==========================================
-    function toggleSidebar() {
-        document.getElementById('bkSidebar').classList.toggle('expanded');
-    }
+    /* ==========================================
+       HELPERS
+       ========================================== */
+    function toggleSidebar() { document.getElementById('bkSidebar').classList.toggle('expanded'); }
 
-    // ==========================================
-    // HELPERS
-    // ==========================================
     function fmtDate(dateStr) {
         if (!dateStr) return '';
-        var d = new Date(dateStr);
-        return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+        return new Date(dateStr).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
     }
 
     function showToast(msg) {
         var t = document.getElementById('toast');
-        t.textContent = msg;
-        t.classList.add('show');
-        setTimeout(function() { t.classList.remove('show'); }, 3000);
+        t.textContent = msg; t.classList.add('show');
+        setTimeout(function(){t.classList.remove('show')},3000);
     }
 
-    // Card number auto-formatting
     document.addEventListener('input', function(e) {
         if (e.target.id === 'fCardNum') {
-            var v = e.target.value.replace(/\D/g, '').substring(0, 16);
-            e.target.value = v.replace(/(.{4})/g, '$1 ').trim();
+            var v = e.target.value.replace(/\D/g,'').substring(0,16);
+            e.target.value = v.replace(/(.{4})/g,'$1 ').trim();
         }
         if (e.target.id === 'fCardExp') {
-            var v = e.target.value.replace(/\D/g, '').substring(0, 4);
-            if (v.length >= 2) v = v.substring(0, 2) + '/' + v.substring(2);
+            var v = e.target.value.replace(/\D/g,'').substring(0,4);
+            if (v.length >= 2) v = v.substring(0,2)+'/'+v.substring(2);
             e.target.value = v;
         }
-        if (e.target.id === 'fPhone') {
-            e.target.value = e.target.value.replace(/\D/g, '').substring(0, 10);
-        }
+        if (e.target.id === 'fPhone') { e.target.value = e.target.value.replace(/\D/g,'').substring(0,10); }
     });
     </script>
 </body>
